@@ -1,0 +1,1 @@
+<?php $siteModules->ad_skyscraper($moduleArgs[0]); ?>

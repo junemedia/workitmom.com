@@ -1,0 +1,33 @@
+/* --------------------------------------------------------------------IE7 */
+
+button span {
+	margin: 0 0 0 9px;
+}
+
+.item_list li,
+.content,
+li.featured {
+	min-height: 0px;
+}
+
+.text-content ul, .content ul {
+	list-style-image: none;
+	list-style-type: circle;
+}
+
+#indulge_yourself ul li {
+	background: none;
+}
+#nav-top-userbar {
+	margin:0;
+}
+
+form dl dd {
+	float: none;	
+}
+dl.form dd {
+	float: none;	
+}
+#marketplace_item .contact dd {
+	float: none;
+}

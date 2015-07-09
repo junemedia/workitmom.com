@@ -1,0 +1,55 @@
+/*-------------------------------------------- Main Featured Article */
+
+#featured_article {
+	margin: 0 0 25px 0;
+}
+
+#featured_article .content {
+	padding: 9px 15px;
+}		
+
+#featured_article td {
+	padding: 0;
+	background: none;
+	border: 0;
+	vertical-align:top;
+}
+
+#featured_article .body {
+	width: 394px;
+	float: left;
+}
+#featured_article .body_short {
+	width: 274px;
+	float: left;
+}
+
+
+#featured_article .img {
+	width: 183px;
+	height: 251px;
+	margin: 0 23px 0 0;
+	background: none no-repeat;
+	float: left;
+}
+
+#featured_article p, #featured_article li {
+	font-size: 0.875em;
+}
+
+.index #featured_article p {
+	padding: 0 0 15px 0;
+	margin: 0 0 15px 0;
+	background: url(../images/site/dotted-small.png) repeat-x left bottom;
+}
+
+
+/*-------------------------------------------- Daily Inspiration */
+
+#daily_inspiration .title {
+	background: url(../images/site/icons_site.png) no-repeat 0 -47px;
+}
+
+#daily_inspiration li {
+	margin-bottom: 10px;
+}

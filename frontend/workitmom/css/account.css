@@ -1,0 +1,342 @@
+#account_icon {
+	background: url(../images/site/icons_connect.png) no-repeat 0 -676px;
+}
+#recent_activity .header .title {
+	background: url(../images/site/icons_connect.png) no-repeat 0 -743px;
+}
+.account a#change-password {font-size: 0.75em;}
+
+/*-------------------------------------------- Sign In */
+#form_sign_in input.textinput,
+#forgot-password-form input.textinput {
+	width: 255px;
+}
+#forgot-password-link {
+	font-size: 0.75em;
+	margin-top: 10px;
+	display: block;
+}
+#forgot-password-form {
+	padding-top: 10px;
+}
+ul#why_join {
+	margin: 4px 0 10px 0;
+}
+ul#why_join li {
+	font-size: 0.875em;
+	margin: 0 0 4px 0;
+}
+
+/*-------------------------------------------- Register */
+#register-stages {
+	margin: 10px 0 0 0;
+}
+
+/*-------------------------------------------- Account */
+#my_day_snapshot {
+	margin-bottom: 25px;
+}
+#my_day_snapshot input.textinput, #my_life_todolist input.textinput, #my_life_todolist textarea {
+	width: 255px;
+}
+#my_day_snapshot .header .title {
+	background: url(../images/site/icons_account.png) no-repeat 0 -64px;
+}
+
+/* Stress slider */
+div.stressslider {
+	width: 270px;
+	height: 16px;
+	background: #eee;
+	margin: 10px 0 15px;
+	line-height:16px;
+	position: relative;
+	z-index:1000;
+}
+div.stressslider div.knob {
+	background: url(../images/account/slider.png) no-repeat 0 0;
+	width: 16px;
+	height: 32px;
+	position: absolute;
+	top: -8px;
+}
+
+#account_alerts .header .title {
+	background: url(../images/site/icons_account.png) no-repeat 0 -295px;
+}
+#my_blog_posts .header .title {
+	background: url(../images/site/icons_blog.png) no-repeat 0 -60px;
+}
+#my_life_todolist .header .title {
+	background: url(../images/site/icons_account.png) no-repeat 0 -111px;
+}
+#check_this_out .header .title {
+	background: url(../images/site/icons_account.png) no-repeat 0 -357px;
+}
+
+/*-------------------------------------------- Inbox */
+.messaging-system {
+	font-size: 0.75em;
+}
+.messaging-system input.check {
+	margin: 0px auto;
+	float: none;
+}
+.messaging-system .message-check {
+	width: 20px;
+	text-align: center;
+}
+.messaging-system .message-actions {
+	width: 15px;
+	font-weight: bold;
+}
+.messaging-system .message-actions a img {
+	padding: 5px;
+}
+.messaging-system small {
+	display: block;
+	line-height: 1.25em;
+	color: #999;
+}
+.messaging-system tr td {
+	background: #FFF;
+}
+.messaging-system tr td a {color: #4e4e4e;}
+
+/* New Messages */
+.messaging-system tr.new-message td {background: #E4F5FB;}
+.messaging-system tr.new-message td a {color: #0c7b9f;}
+.messaging-system tr.new-message td.message-subject {font-weight: bold;}
+
+#message-actions label, #message-actions a {
+	font-size: 0.75em;
+	float: left;
+}
+
+#message-actions a {
+	margin-left: 8px; 
+}
+/* Send Message */
+#write-message {
+	padding: 15px;
+	background-color: #E4F5FB;
+	margin-bottom: 20px;
+}
+#write-message input.textinput,
+#write-message textarea {
+	width: 300px;	
+}
+
+/* --------------------------------------- My Account Details */
+
+#my_life_todolist h3,
+#my_day_snapshot h3 {
+	margin-bottom: 0;
+	text-transform:none;
+	/*color: #2798BD;*/
+}
+#my_blog_posts .arrow {
+	font-size:0.75em;
+}
+/* --------------------------------------- Sidebar Navigation */
+#account_nav div.img {
+	float: left;
+}
+#account_nav p.info {
+	float: left;
+	font-size: 0.75em;
+	line-height: 1.2em;
+	padding-top: 5px;
+	margin-left: 10px;
+	width: 195px;
+}
+#account_nav ul {
+	margin-top: 10px;
+	font-size:0.85em;
+	text-transform:lowercase;
+}
+
+#account_nav .new {
+	color: #CC0000;
+	font-size: 0.65em;
+	font-weight: bold;
+	margin: 0px 5px;
+	text-transform: uppercase;
+}
+
+/*-------------------------------------------- Listings */
+.account .item_list .actions {
+	width: 140px;
+	float: left;
+}
+.account .item_list h3 {
+	font-size: 1em;
+	margin-bottom: 5px;
+}
+.account .item_list h4 {
+	font-size: 0.875em;
+	text-transform: lowercase;
+}
+.account .item_list .actions a.img {
+	display: block;
+	margin: 0 0 5px;
+	float: none;
+}
+.account .item_list .info {
+	width: 450px;
+	float: left;
+}
+.account .item_list .info p {
+	font-size: 0.75em;
+	margin-bottom: 8px;
+}
+.account .item_list .actions ul.links {
+	display: block;
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+.account .item_list .actions li {
+	display: block;
+	padding: 0;
+	margin: 5px 0 0 0;
+}
+
+/* Small listing */
+.account .small_list .header {
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #ddd;
+}
+.account .small_list .header h3 {
+	font-size: 0.8125em;
+	margin-bottom: 0;
+	float: left;
+}
+.account .small_list .header small.date {
+	font-size: 0.6875em;
+	float: right;
+}
+.account .small_list .header em {
+	font-size: 0.75em;
+}
+.account .small_list .body {
+	float: none;
+	padding: 5px 0;
+}
+.account .small_list .actions {
+	text-align: right;
+	border-top: 1px solid #ddd;
+	padding-top: 6px;
+	margin-top: 6px;
+	width: auto;
+	float: none;
+}
+.account .small_list .actions small {
+	font-size: 0.6875em;
+}
+#message-current {
+	margin-bottom: 15px;
+}
+
+/* --------------------------------------- Account Alerts Module */
+#account_alerts h2 {
+	float:left;
+	width:100px;
+}
+#account_alerts li {
+	font-size:0.75em;
+}
+#account_alerts li a.delete {
+	font-size:0.91667em;
+	padding-left: 13px;
+	margin-left: 4px;
+}
+#account_alerts .button_dark {
+	margin-top:0;
+}
+#account_alerts .title .fr {
+	margin-left:8px;
+}
+.alert-list li {
+	padding:8px;
+}
+.alert-list li span.alert-detail {
+	width: 550px;
+}
+#edit-alerts {
+	margin: -62px 10px 0 0;
+}
+/* --------------------------------------- Account Details */
+#account-details-form #form_age {
+	width: 50px;
+}
+
+/* --------------------------------------- Recent Activity */
+#recent_activity {
+	margin-top: 10px;
+}
+
+/*----------------------------------------- Account Photos */
+#account-photos ul {
+	width: auto;
+}
+#account-photos li {
+	width: auto;
+	height: auto;
+	font-size: 1em;
+	text-align: left;
+	padding: 10px;
+}
+#account-photos a.img {
+	margin-bottom: 5px;
+}
+#account-photos a.delete {
+	display: block;
+}
+#account-photos img {
+	display: block;
+	background-color: #fff;
+	border: 1px solid #CCC;
+}
+#account-photos small.caption {
+	display: block;
+	font-size: 0.6875em;
+	height: 2em;
+	width: 100px;
+	line-height: 1em;
+}
+
+/* Photo upload form */
+#account-photo-upload dl .caption {
+	padding-top: 0;
+}
+#account-photo-upload dl dt {
+	width: 15%;	
+}
+#account-photo-upload dl dd {
+	width: 84%;	
+}
+
+/* ------------------- Group Detail Page - Member List */
+
+.profile .member_list .button_dark {
+	margin-top: -27px;
+}
+.profile .member_list li {
+	width: 80px;
+}
+
+#account-privacy-form label.radio {
+	float: left;
+	margin: 4px 10px 0 0;
+}
+
+/* --------------------------- Delete My Account */
+#delete-account {
+	font-size:0.75em;
+}
+
+.delete-text p {
+	padding: 3px 3px 3px 6px;
+}

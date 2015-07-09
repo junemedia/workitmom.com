@@ -1,0 +1,91 @@
+#save_time_icon {
+	background: url(../images/site/icons_save_time.png) no-repeat 0 0;
+}
+#recipes_icon {
+	background: url(../images/site/icons_save_time.png) no-repeat 0 -523px;
+}
+
+/*-------------------------------------------- Save Time Landing Page */
+
+#quick_tips_block img.img,
+#checklists_block img.img,
+#essential_guides_block img.img,
+#quick_recipes_block img.img {
+	display: block;
+	background: #FFF;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+/*-------------------------------------------- Get the Essentials */
+
+#get_the_essentials .title {
+	background: url(../images/site/icons_save_time.png) no-repeat 0 -290px;
+}
+#get_the_essentials ul {
+}
+
+.panel-right #get_the_essentials ul {
+	float: none;
+	width: auto;
+}
+#essentials_content .links {
+	float:left;
+	width:362px;
+}
+#essentials_content .links ul {
+	margin-bottom:15px;
+	font-size:0.75em;
+}
+#essentials_content h2.title {
+
+}
+#essentials_content .sidebar {
+	float:right;
+	width:190px;
+	margin-right:20px;
+	margin-bottom:15px;
+}
+
+#essentials_content .quicktip_checklist_box {
+	background-color:#FFF7E2;
+	margin-top:10px;
+	padding:10px;
+}
+
+/*-------------------------------------------- Quick Tips */
+#quick_tips_block .title {
+	background: url(../images/site/icons_save_time.png) no-repeat 0 -67px;
+}
+#quick_tips_icon {
+	background: url(../images/site/icons_save_time.png) no-repeat 0 -330px;
+}
+
+/*-------------------------------------------- Checklists */
+#checklists_block .title {
+	background: url(../images/site/icons_save_time.png) no-repeat 0 -234px;
+}
+#checklists_icon {
+	background: url(../images/site/icons_save_time.png) no-repeat 0 -393px;
+}
+
+/*-------------------------------------------- Quick Tips */
+#quick_recipes_block .title {
+	background: url(../images/site/icons_save_time.png) no-repeat 0 -119px;
+}
+
+/*-------------------------------------------- Checklists */
+#essential_guides_block .title {
+	background: url(../images/site/icons_save_time.png) no-repeat 0 -178px;
+}
+#essential_guides_icon {
+	background: url(../images/site/icons_save_time.png) no-repeat 0 -453px;
+}
+
+/*-------------------------------------------- Quick Recipies */
+#quickrecipes_listing .sub {
+	display:none;
+}
+#quickrecipes_listing .item_list div.body {
+	width:515px;
+}

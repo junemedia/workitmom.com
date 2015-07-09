@@ -1,0 +1,1 @@
+<?php $siteModules->recent_featured_posts($moduleArgs); ?>

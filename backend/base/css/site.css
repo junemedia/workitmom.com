@@ -1,0 +1,287 @@
+body, textarea {
+	font-size: 8pt;
+	font-family: georgia, verdana, arial sans-serif;
+}
+.normal {
+	font-size: 8pt;
+	color: black;
+	text-decoration: none;
+}
+.normal:hover {
+	text-decoration: none;
+}
+h1 {
+	border-bottom: 4px solid #000;
+}
+table td, table th {
+	border: 1px solid #ccc;
+	text-align: left;
+	padding: 8px 8px;
+}
+table th {
+	background: #f4f4f4;
+	padding: 10px 8px;
+}
+fieldset{
+	border: 1px solid #ccc;
+}
+table, fieldset, p, form {
+	margin: 0 0 10px 0;
+}
+table {
+	border-collapse: collapse;
+}
+table.vertical tr td:first-child, table.horizontal th {
+	border: 1px #888888 solid;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 18pt;
+	margin: 8px 10px 8px 3px;
+	display: inline;
+}
+h3 {
+	font-weight: normal;
+	font-size: 12pt;
+	display: inline;
+}
+
+div.header_wrapper {
+	margin-bottom: 8px;
+}
+
+.body_wrapper {
+	width: 550px;
+	margin: 0px auto;
+}
+
+.breadcrumbs {
+	padding-bottom: 10px;
+	text-transform: lowercase;
+}
+
+/*************** SITEWIDE *********************/
+
+textarea {
+	width: 550px;
+	height: 300px;
+	padding: 8px;
+	border: 3px #D7CADF double;
+	text-align: left;
+}
+
+form {
+	margin: 10px 5px 5px;
+}
+
+ul {
+	padding-left: 25px;
+}
+
+input {
+	padding: 3px;
+}
+
+.textinput {
+	width: 450px;
+	background-color: white;
+}
+
+code {
+	font-style: normal;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.underlined {
+	text-decoration: underline;
+}
+
+.centered {
+	margin: 0px auto !important;
+}
+
+small, .small {
+	font-size: 8pt;
+}
+
+.small.link {
+	font-size: 8pt;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.resolved {
+	font-style: italic;
+}
+
+.action {
+	margin: 0px 3px;
+}
+
+.chunk {
+	margin: 20px 0px;
+}
+
+input.bigbutton {
+	margin: 10px 0px;
+	font-size: 12pt;
+}
+
+/**********************************************/
+
+/***************** PAGINATION ******************/
+
+div.pagination {
+	margin: 5px auto;
+	font-size: 0.875em;
+	line-height: 2em;
+	height: 2em;
+}
+div.pagination ul {
+	list-style: none;
+	list-style-image: none;
+	clear:both;
+	padding: 0;
+}
+div.pagination li {
+	display: block;
+	float: left;
+	margin: 0 2px 0 0;
+}
+div.pagination li a,
+div.pagination li span.item {
+	display: block;
+	font-weight: bold;
+	padding: 0px 10px;
+	background: #f1f1f1;
+}
+div.pagination li span.item {
+	color: #eee;
+	background: #fafafa;	
+}
+div.pagination li a:hover,
+div.pagination li span.current {
+	text-decoration: none;
+	background: #FFFFFF;
+	color: #2798bd;
+}
+	
+/**********************************************/
+
+/***********************LISTINGS****************/
+
+td, input {
+	font-family: Segoe UI, Verdana;
+	font-size: 9pt;
+}
+
+td.textfield {
+	width: 750px;
+}
+
+table.horizontal tr.metadata th, table.vertical td.metadata {
+	background-color: #CCCCCC;
+	font-weight: bold;
+	font-style: Georgia;
+}
+
+tr.high_priority.even {
+	background-color: #FFCFCF;
+}
+
+tr.high_priority.odd {
+	background-color: #FFC4C4;
+}
+
+tr.normal_priority.even {
+	background-color: #FFFFFF;
+}
+
+tr.normal_priority.odd {
+	background-color: #F8F8F8;
+}
+
+tr.low_priority.even {
+	background-color: #E2FEFF;
+}
+
+tr.low_priority.odd {
+	background-color: #F2FAFF;
+}
+
+tr.hovered {
+	background-color: #FFFFCC !important;
+	cursor: default;
+}
+
+th.medium {
+	width: 300px;
+}
+
+/***************** USER ********************/
+
+.user .img {
+	margin-right: 12px;
+}
+
+.user .text {
+	padding-top: 5px;
+}
+
+.user .text h3 {
+	margin: 16px 6px 0px 0px;
+}
+
+.user .text .details {
+	font-size: 7pt;
+	font-style: italic;
+	margin: 0px 6px 6px 6px;
+}
+
+.user img {
+	border: 1px #CCCCCC solid;
+}
+
+.user img:hover {
+	border: 1px #AAAAAA solid;
+}
+
+
+/*************** REPORTS ******************/
+.reports_reply {
+	
+}
+
+.reports_reply div {
+	margin: 10px 0px;
+}
+
+.reports_reply label {
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.reports_reply dd {
+	margin-left: 0px;
+	margin-bottom: 10px;
+}
+
+.reports_reply input {
+	width: 280px;
+}
+
+.reports_reply textarea {
+	width: 340px;
+	height: 70px;
+}

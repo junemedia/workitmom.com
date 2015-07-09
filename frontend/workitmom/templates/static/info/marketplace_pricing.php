@@ -1,0 +1,5 @@
+	<?php Template::setTitle('Marketplace Listing Prices'); ?>
+
+<p><strong>Regular:</strong> Your listing will appear in our main marketplace directory, be searchable, and have it's own customized marketplace page.</p>
+<p><strong>Featured:</strong> Your listing will receive special exposure at the top of our marketplace directory as well as in our Featured Marketplace Module that rotates through the many areas on our website. Featured Listings are limited to <strong>24 per month</strong>, so reserve your spot now!</p>
+<p><strong>Featured Plus Newsletter:</strong> All the benefits of a Featured Listing plus inclusion of your listing in our member newsletter, distributed to thousands of Work It, Mom! members weekly. If you choose this option, your listing will be featured along with just 2 others in one of our newsletters. (When you purchase this option, your listing will be featured in our newsletter once (1 time) during the month.)</p>

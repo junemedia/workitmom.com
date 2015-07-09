@@ -1,0 +1,157 @@
+* {
+	color: black !important;
+	width: auto;
+	background: transparent !important;
+	font-weight: normal;
+}
+body {
+	background: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #515151;
+	font-size: 12pt;
+	margin: 0;
+}
+
+h1 {
+	text-transform: lowercase;
+	font-weight: bold;
+}
+h2 {
+	text-transform: lowercase;
+	font-size: 16pt;
+	font-weight: bold;
+}
+h3 {
+	font-size: 12pt;
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+}
+h1, h2 {
+	padding: 0;
+	margin-bottom: 0.5em;
+}
+
+a {
+	text-decoration: none;
+}
+
+a img {
+	border: 0;
+}
+
+p {
+	margin: 0 0 5pt 0;
+	padding: 0;
+}
+
+#logo {
+	margin-bottom: 5pt;
+}
+
+/* Show print-only items */
+.printonly {
+	display: block;
+}
+
+/* Hide screen-only items */
+.screenonly,
+.panel-right,
+#footer,
+#bottom_feature,
+div.divider,
+div.breadcrumbs,
+.index,
+.button_bright,
+.button,
+.button_dark,
+.img,
+#blog_title,
+.blogs .entry .header p,
+#article_title p,
+#article_title .img,
+#pullquote,
+.pagination,
+#page-intro .img, 
+p.links,
+#ask_question,
+#search_block,
+#ad-header,
+.tab_menu,
+#browse_bar,
+#sort_bar,
+#sub_header,
+.most_popular,
+#groups_listing .item_list .content,
+#start_discussion,
+#group-members,
+.rss,
+#group_links,
+.flag,
+#meet_a_member,
+.profile .main .holder,
+#friends-block,
+#photos-block,
+#recent_activity,
+#featured_article,
+#enter_to_win {
+	display: none;
+}
+
+/* Global layout tweaks */
+#main-content, .sub-content, .fullwidth, .withleftnav {
+	padding: 0;
+	border: 0;
+}
+
+.block {
+	padding: 5pt 0;
+	border-bottom: 1pt solid #CCC;
+}
+
+.checklist ol {
+	margin: 10pt 0 0;
+}
+.checklist ol li {
+	list-style-image: url(../images/articles/checklist.png);
+	margin: 0 0 10pt 24pt;
+}
+.checklist .entry ul li {
+	margin: 0;
+}
+.checklist h3 {
+	display: none;
+}
+
+.item_list li,
+.most_popular li {
+	margin-bottom: 4pt;
+}
+.item_list li a,
+.item_list li p,
+.most_popular li a,
+.most_popular li p {
+	line-height: 14pt;
+	margin: 0;
+	padding: 0;
+}
+.item_list li p.text-content,
+.most_popular li p {
+	font-size: 10pt;
+}
+
+/* ------------------------ Article */
+.articles #post .entry p {
+	margin-bottom: 8pt;
+}
+#about_author {
+	border-top: 1pt solid #CCC;
+}
+.sub {
+	margin: 5pt 0 15pt;
+}
+
+#essentials_content .links {
+	float: none;
+	width: 100%;
+}

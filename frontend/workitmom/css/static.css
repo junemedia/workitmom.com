@@ -1,0 +1,167 @@
+.static .content ul {
+	font-size:0.85em;
+	text-transform:lowercase;
+}
+/*-------------------------------------------- About */
+
+#about_content {
+	margin-bottom: 10px;
+}
+#about_content h2 {
+	margin-bottom:10px;
+}
+
+#about_content p {
+	font-size: 0.875em;
+	margin-bottom: 15px;
+}
+
+/*-------------------------------------------- Contact */
+
+#contact .submit {
+	margin-left: 120px;
+}
+#contact .inline select, #contact .inline input.textinput {
+	margin: 0px;
+}
+/*-------------------------------------------- Site Badges */
+
+#site-badges .white {
+	background:#fff;
+	padding:15px;
+	font-size:0.75em;
+}
+#site-badges .badge-holder {
+	margin-bottom:12px;
+}
+#site-badges .badge-holder .image {
+	float:left;
+	width:220px;
+}
+
+#site-badges .badge-holder .image p {
+	margin-top:5px;
+}
+#site-badges .badge-holder .information {
+	float:left;
+	width:320px;
+}
+
+#site-badges .badge-holder .information textarea {
+	width:320px;
+	font-size:1em;
+	height:100px;
+}
+
+/*-------------------------------------------- Tell Your Friends */
+
+
+/*-------------------------------------------- Newsletter */
+
+#newsletter label {
+	float: left;
+	margin: 0 15px 0 0;
+	line-height: 1.75em;
+}
+
+#newsletter input.textinput {
+	width: 200px;
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+#newsletter .submit {
+	margin: 2px 0 0 0;
+}
+
+/*--------------------------------------------- Help & FAQs */
+
+#help_content p {
+	font-size: 1.1em;
+	margin-bottom: 1em;
+}
+#help_content small {
+	clear: both;
+	font-size: 0.875em;
+	float: right;
+	margin: -20px 0 5px 5px;
+}
+
+/*--------------------------------------------- Press Coverage */
+
+#press_content ul {
+	margin: 5px 0;
+	padding-left: 0;
+}
+#press_content ul li {
+	padding: 10px;
+	font-size:1.1em;
+}
+#press_content #pr ul {
+	font-size:1em;
+}
+
+/*--------------------------------------------- Press Coverage */
+
+#team_content h2 {
+	margin: 0 0 5px 0;
+}
+#team_content img.img, #about_content img.img {
+	float: left;
+	margin: 3px 22px 10px 0;
+}
+#team_content p {
+	margin-bottom: 1em;
+	font-size:1.18em;
+	line-height:20px;
+}
+
+
+/*--------------------------------------------- Advertise */
+
+#advertise_content p, #advertise_content ul {
+	margin-bottom: 1em;
+}
+
+/*--------------------------------------------- Advertise */
+#static_content p, #static_content ul {
+	margin-bottom: 1em;
+	font-size: 0.75em;
+}
+
+#static_content small {
+	margin: -15px 0 5px 0;
+	font-size: 0.6875em;
+	display: block;
+	text-align: right;
+}
+
+#static_content ol li {
+	list-style: upper-roman;
+	list-style-position: inside;
+}
+
+#static_content ol h3 {
+	text-transform: uppercase;
+	display: inline;
+	clear: right;
+	font-size: 1em;
+}
+
+#partner_list {
+	margin-bottom: 1em;
+}
+#partner_list ul {
+	width:625px;
+}
+#partner_list li {
+	height: 120px;
+	width:177px;
+}
+
+#search_listing .item_list div.body {
+	width:505px;
+}
+#search_listing #tab_menu ul {
+	font-size:0.83em;
+}

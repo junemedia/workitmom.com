@@ -1,0 +1,220 @@
+/*-------------------------------------------- Top Nav */
+
+#nav-top {
+	display: block;
+	width: 960px;
+	margin-top: 0px;
+	position: relative;
+	z-index: 10;
+	height: 41px;
+	background: url(../images/site/dotted-large.png) repeat-x left bottom;
+}
+
+#nav-top-buttons {
+	float: right;
+}
+
+#nav-top-buttons a span {
+	position: absolute;
+	left: -9999px;
+}
+
+#nav-top-buttons a {
+	display: block;
+	float: left;
+	height: 27px;
+	background-image: url(../images/site/button_sprite.png);
+}
+
+#nav-top a#sign_in {
+	width: 137px;
+	background-position: left -48px;
+	margin: 0 15px 0 0;
+}
+
+#nav-top a#join_now {
+	width: 148px;
+	background-position: -150px -48px;	
+}
+
+/* User logged-in details. */
+#nav-top-userbar{
+	font-size:0.75em;
+	line-height: 1.5em;
+	text-align: right;
+	text-transform: lowercase;
+	margin-top: -10px;
+}
+
+#nav-top-userbar a {
+	background: none;
+	display: inline;
+	float: none;
+}
+#nav-top-userbar a strong {
+	color:#ffa300;
+}
+
+#nav-top-userbar-username {
+	font-weight: bold;
+}
+
+/* Nav bar */
+#nav-top ul {
+	list-style-type: none;
+	padding: 0;
+	float: left;
+	z-index: 12;
+}
+#nav-top li {
+	padding: 0px;
+	float: left;
+	position: relative;
+	text-transform: lowercase;
+}
+
+#nav-top li.parent{
+	padding-right: 24px;
+}
+
+/* Drop-down buttons */
+#nav-top li div.nav-item {
+	font-weight: bold;
+}
+
+#nav-top li div.nav-item a {
+	color: #46ABCC;
+	display: block;
+	padding: 0px;
+	text-decoration: none;
+	/*background-image: url(../images/site/nav_sprite.png);
+	background-repeat: no-repeat;*/
+	height: 39px;
+}
+
+#nav-top li div.nav-item a span {
+	/*position: absolute;
+	left: -9999px;*/
+	float: left;
+    font-size: 21px;
+    letter-spacing: -1px;
+    margin-top: 3px;
+}
+
+/*#nav-top li.blogs div.nav-item a {
+	background-position: left top;
+	width: 61px;
+}
+#nav-top li.blogs:hover div.nav-item a,
+#nav-top li.blogs div.nav-item a.hover,
+#nav-top li.blogs div.nav-item a.active {
+	background-position: left -39px;
+}
+
+#nav-top li.explore div.nav-item a {
+	background-position: -73px top;
+	width: 80px;
+}
+#nav-top li.explore:hover div.nav-item a,
+#nav-top li.explore div.nav-item a.hover,
+#nav-top li.explore div.nav-item a.active {
+	background-position: -73px -39px;
+}
+
+#nav-top li.connect div.nav-item a {
+	background-position: -152px top;
+	width: 97px;
+}
+#nav-top li.connect:hover div.nav-item a,
+#nav-top li.connect div.nav-item a.hover,
+#nav-top li.connect div.nav-item a.active {
+	background-position: -152px -39px;
+}
+
+#nav-top li.save_time div.nav-item a {
+	background-position: -248px top;
+	width: 111px;
+}
+#nav-top li.save_time:hover div.nav-item a,
+#nav-top li.save_time div.nav-item a.hover,
+#nav-top li.save_time div.nav-item a.active {
+	background-position: -248px -39px;
+}
+
+#nav-top li.shop div.nav-item a {
+	background-position: -358px top;
+	width: 70px;
+}
+#nav-top li.shop:hover div.nav-item a,
+#nav-top li.shop div.nav-item a.hover,
+#nav-top li.shop div.nav-item a.active {
+	background-position: -358px -39px;
+}
+
+#nav-top li.destress div.nav-item a {
+	background-position: -427px top;
+	width: 106px;
+}
+#nav-top li.destress:hover div.nav-item a,
+#nav-top li.destress div.nav-item a.hover,
+#nav-top li.destress div.nav-item a.active {
+	background-position: -427px -39px;
+}
+
+#nav-top li.contribute div.nav-item a {
+	background-position: -532px top;
+	width: 102px;
+}
+#nav-top li.contribute:hover div.nav-item a,
+#nav-top li.contribute div.nav-item a.hover,
+#nav-top li.contribute div.nav-item a.active {
+	background-position: -532px -39px;
+}*/
+
+#nav-top li:hover div.nav-item a,
+#nav-top li div.nav-item a.hover,
+#nav-top li div.nav-item a.active{
+	color:#FFA300;
+}
+
+/* Drop-downs */
+#nav-top li div.nav-popup {
+	position: absolute;
+	z-index: 9999;
+	display: none;
+	background: #FFF;
+	padding: 0px 0 0px 0;
+	left: 0;
+	top: 100%;
+	border: 2px dotted #CCC;
+	border-top: 0;
+}
+#nav-top li:hover div.nav-popup, #nav-top li.hover div.nav-popup, #nav-top li.open div.nav-popup {
+	display: block;
+}
+#nav-top li div.nav-popup ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 165px;
+}
+#nav-top li div.nav-popup ul li {
+	float: none;
+	text-align: left;
+}
+#nav-top li div.nav-popup li a {
+	display: block;
+	float: none;
+	background: none;
+	font-size: 0.75em;
+	line-height: 2em;
+	font-weight: bold;
+	padding: 0 12px;
+	text-decoration: none;
+}
+#nav-top li div.nav-popup li a:hover {
+	background: #2798bd;
+	color: #fff;
+	text-decoration: none;
+	position: relative;
+}

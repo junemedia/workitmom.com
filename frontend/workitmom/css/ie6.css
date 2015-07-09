@@ -1,0 +1,61 @@
+/* --------------------------------------------------------------------IE6 */
+
+button span {
+	margin: 0 0 0 9px;
+}
+
+.item_list li,
+.content,
+li.featured {
+	zoom: 1;
+}
+
+.text-content ul, .content ul {
+	list-style-image: none;
+	list-style-type: circle;
+	padding: 0 0 0 20px;
+	margin: 0;
+}
+
+#indulge_yourself ul li {
+	background: none;
+}
+
+form div.friends-checklist {
+	height: 200px;
+}
+div.wizard div.title span.actions {
+	right: 28px;
+}
+
+#browse_bar li a {
+	height:0;
+}
+#profile_module #tab_menu {
+	margin-bottom:-10px;
+}
+.content .item_list ul {
+	padding:0;
+}
+#nav-top-userbar {
+	margin:0;
+}
+.items-right {
+	padding-left:9px;
+}
+
+form dl dt label {
+	padding:5px 0;
+}
+form dl dd {
+	float: none;	
+}
+div.stressslider {
+	height:0;
+}
+dl.form dd {
+	float: none;	
+}
+#marketplace_item .contact dd {
+	float: none;
+}

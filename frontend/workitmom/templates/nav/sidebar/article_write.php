@@ -1,0 +1,1 @@
+<?php $siteModules->write_article(); ?>

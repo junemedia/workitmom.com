@@ -1,0 +1,1 @@
+<?= $isSelf ? 'You have' : $author->name.' has'; ?> not written any posts yet.

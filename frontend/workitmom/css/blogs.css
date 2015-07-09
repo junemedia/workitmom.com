@@ -1,0 +1,258 @@
+/* Icons */
+
+#blogs_icon {background: url(../images/site/icons_blog.png) no-repeat 0 0; top:0;}
+#featured_blogs .title {background: url(../images/site/icons_blog.png) no-repeat 0 -105px;}
+#member_blogs .title {background: url(../images/site/icons_blog.png) no-repeat 0 -155px;}
+#weekly_topic .title {background: url(../images/site/icons_blog.png) no-repeat 0 -205px;}
+#blog_spotlight .title {background: url(../images/site/icons_blog.png) no-repeat 0 -256px;}
+#from_our_bloggers .title {background: url(../images/site/icons_blog.png) no-repeat 0 -60px;}
+
+/*-------------------------------------------- Blogs */
+
+#blog_title div.img {
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+#blog_title {
+	margin: 0 0 30px 0;
+}
+
+#blog_title div.body {
+	float: left;
+	margin: 0;
+	width: 510px;
+}
+#blog_title h2 {
+	float:left;
+	width:370px;
+}
+
+#blog_title cite {
+	display: block;
+	margin: 0px 0 6px 0;
+	font-size: 0.875em;
+	padding-bottom: 8px;
+	background: url(../images/site/dotted-small.png) repeat-x left bottom;	
+}
+
+#weekly_topic {
+	margin-top:55px;
+}
+.blogs #post .entry .header p {margin: 0; font-size:0.9em}
+.blogs .entry .header {
+	padding-bottom: 8px;
+	background: url(../images/site/dotted-small.png) repeat-x left bottom;	
+	margin-bottom: 10px;
+}
+.panel-right .rss {
+	font-size:1.4em;
+	margin-bottom:10px;
+	margin-top:0;
+}
+.blogs .block {
+	margin-bottom: 25px;
+}
+.blogs #comment .fieldwrap {
+	margin-bottom: 5px;
+}
+.blogs .featured_blogs {
+	margin: 0 0 10px 0;
+	padding: 0px;
+}
+
+.blogs .featured_blogs .img {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.blogs .featured_blogs div.body {
+	float: left;
+	width: 210px;
+}
+
+.blogs .featured_blogs a.post {
+	display: block;
+	font-weight:bold;
+	margin: 2px 0;
+	
+}
+
+.blogs #member_blogs a.post {
+	display: block;
+	font-weight:bold;
+	margin: 0 0 2px;
+}
+
+.blogs .featured_blogs li {
+	list-style: none;
+	list-style-item: none;
+	padding: 10px;
+}
+
+.blogs #blog_spotlight h3 a {
+	color: #4e4e4e;
+}
+
+#from_our_bloggers ul {
+	list-style: none;
+	list-style-image: none;
+	margin: 0 0 -20px 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){ #from_our_bloggers ul {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	} 
+}
+
+#from_our_bloggers li {
+	margin: 0 0 20px 0;
+}
+
+#from_our_bloggers a.img {
+	float: left;
+	display: block;
+	width: 60px;
+	height: 60px;
+	margin: 0 15px 0 0;
+}
+
+#from_our_bloggers a.post {
+	display: block;
+	font-weight:bold;
+}
+
+#from_our_bloggers p.credit {
+	font-size: 0.75em;
+}
+
+#from_our_bloggers div.body {
+	float: left;
+	width: 225px;
+}
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+
+img.centered {
+	display: block;
+	margin: 10px auto;
+	}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 25px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 25px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+/* --------------------------------------------- Featured Blogs */
+.blogs .panel-left {
+	overflow:visible;
+}
+.blogs #article_title {
+	margin-bottom: 15px;
+	position:relative;
+}
+.blogs .header_icon {
+	position:absolute;
+	top:-25px;
+	right:0;
+}
+.blogs #article_title div.body {
+	width: 495apx;
+}
+
+.blogs .post {
+	margin-top: 10px;
+}
+#featured_blogs .blogs .post {
+	font-weight:bold;
+}
+#featured_blogs .item_list div.body {
+	width:520px;
+}
+#featured_blogs #featured_blogs_landing_module .item_list div.body {
+	width:210px;
+}
+.blogs .post .entry {
+	font-size: 0.875em;
+	padding: 8px 0 8px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #CCC;
+}
+.post .entry ul {
+	margin:0 0 0.75em 0;
+}
+.post .entry ul li {
+	margin-left:25px;
+}
+#post .entry ul {
+	margin:0 0 0.75em 0;
+}
+#post .entry ul li {
+	margin-left:25px;
+}
+
+.post .entry p {
+	margin-bottom: 0.75em;
+}
+.blogs #article_title div.body {
+	width:480px;
+}
+
+.blogs .post .entry a.more-link {
+	background: url(../images/site/icon-arrow.png) no-repeat right center;
+	padding-right: 10px;
+}
+
+.blogs .post .entry img {
+	margin: 20px;
+}
+
+#article_title div.header {
+	background: url(../images/site/dotted-small.png) repeat-x left bottom;
+	padding-bottom: 8px;
+	margin-bottom: 7px;
+}
+#article_title div.header p {
+	font-size: 0.875em;
+}
+
+#post_title {
+	background: url(../images/site/dotted-small.png) repeat-x left bottom;
+	padding-bottom: 8px;
+}
+
+#post_title p.byline {
+	font-size: 0.875em;
+	margin-bottom: 2px;
+}
+
+.blog-banner {
+	margin-left: 27px;
+}

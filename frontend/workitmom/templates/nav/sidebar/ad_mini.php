@@ -1,0 +1,1 @@
+<?php $siteModules->ad_mini($moduleArgs[0]); ?>

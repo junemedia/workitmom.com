@@ -1,0 +1,328 @@
+#marketplace_icon {
+	background: url(../images/site/icons_shop.png) no-repeat 0 -210px;
+}
+
+#shop_icon {
+	background: url(../images/site/icons_shop.png) no-repeat 0 5px;
+}
+
+#enter_to_win .title {
+	background: url(../images/site/icons_shop.png) no-repeat 0 -319px;
+}
+
+/*-------------------------------------------- Indulge Yourself */
+
+#indulge_yourself .title {
+	background: url(../images/site/icons_shop.png) no-repeat 0 -119px;
+}
+
+#indulge_yourself ul {
+	margin: 0 0 -12px 0;
+	padding: 0;
+	list-style: none;
+	list-style-image: none;
+}
+
+#indulge_yourself ul li {
+	margin: 0 0 12px 0;
+}
+
+#indulge_yourself a.img {
+	display: block;
+	float: left;
+	margin-right: 15px;
+}
+
+#indulge_yourself div.body {
+	float: left;
+	width: 150px;
+}
+
+/*-------------------------------------------- Marketplace Block */
+#marketplace_listing .divider {
+	display:none;
+}
+
+
+#marketplace_block  {
+	margin-bottom:15px;
+	overflow: hidden;
+}
+#marketplace_block h3 {
+	margin-bottom:10px;
+}
+#marketplace_block ul {
+	padding: 0;
+	margin: 5px 0 0 0;
+}
+#marketplace_block .title {
+	background: url(../images/site/icons_shop.png) no-repeat 0 -270px;
+	float:left;
+	width:250px;
+}
+#marketplace_block .button_dark {
+	margin-top:0;
+}
+#marketplace_block .header .fr {
+	margin-left:8px;
+}
+
+#marketplace_block li  {
+	list-style: none;
+	float: left;
+	width: 146px;
+	margin-right: 10px;
+	font-size: 0.75em;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#marketplace_block li a {
+	line-height: 1em;
+}
+
+.marketplace_block  {
+	margin-bottom:15px;
+	width: 300px;
+	overflow: hidden;
+}
+.marketplace_block h3 {
+	margin-bottom:10px;
+}
+.marketplace_block ul {
+	padding: 0;
+	margin: 5px 0 0 0;
+}
+.marketplace_block .content ul {
+	padding:0;
+}
+.marketplace #recent_list .content ul {
+	list-style-image:none;
+	list-style-type:none;
+}
+.marketplace_block li  {
+	list-style: none;
+	float: left;
+	height:160px;
+	width: 135px;
+	font-size: 0.75em;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.marketplace_block li a {
+	line-height: 1em;
+}
+
+
+
+/*-------------------------------------------- Landing Shop >> Marketplace */
+
+.landing #indulge_yourself .body {
+	width: 220px;
+}
+
+.landing #indulge_yourself ul {
+	margin: 0 0 0 0;
+}
+
+/*-------------------------------------------- Marketplace */
+
+.marketplace #search_block {
+	float: right;
+	margin: -5px 0 0 0;
+}
+.marketplace #overview_title {
+	float: left;
+	width: 200px;
+	margin: 0 0 15px 0;
+}
+
+#marketplace_list li {
+	overflow: hidden;
+}
+
+#marketplace_list li .img {
+	position: relative;
+	float: none;
+	margin: 0px auto 10px;
+}
+.marketplace textarea#discounts {
+	position:relative;
+}
+.deal {
+	width: 29px;
+	height: 30px;
+	position: absolute;
+	left: 135px;
+	bottom: -7px;
+	background: url(../images/landing/icon_landing_sprite.png) no-repeat left -398px;
+}
+
+#featured_marketplace ul {
+	list-style: none;
+	list-style-image: none;
+	padding: 0;
+	margin: 0 0 -15px 0;
+}
+
+#featured_marketplace li {
+	padding: 0;
+	margin: 0 15px 15px 0;
+	float: left;
+	width:135px;
+	text-align:center;
+	
+}
+#featured_marketplace li h4 {
+	font-size:0.75em;
+	margin-top:8px;
+	line-height:1.3em;
+}
+#featured_marketplace div.img {
+	position: relative;
+}
+
+#featured_marketplace div.deal {
+	left: 110px;
+}
+#featured_marketplace div.body {
+	float: left;
+	width: 445px;
+	padding: 4px 0 0 0;
+}
+
+#featured_marketplace div.header {
+	margin-bottom: 6px;
+	padding-bottom: 8px;
+	background: url(../images/site/dotted-small.png) repeat-x left bottom;
+}
+
+#marketplace_item  {
+	margin-bottom: 25px;
+}
+#marketplace_item h3 {
+	text-transform:lowercase;
+	margin: 0;
+}
+
+#marketplace_item div.header {
+	display: block;
+	margin-bottom: 15px;
+}
+
+#marketplace_item div.header div.img {
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+#marketplace_item div.header div.body {
+	float: left;
+	width: 500px;
+}
+div.wizard #marketplace_item div.header div.body {
+	width: 400px;
+}
+
+#marketplace_item ul.item_list {
+	padding: 15px;
+	background: #FFF;
+	margin: 0;
+	font-size:0.75em;
+}
+
+#marketplace_item ul.item_list li h3 {
+	font-size:1.2em;	
+}
+
+#marketplace_item ul.item_list li {
+	padding: 0 0 10px 0;
+	margin: 0 0 10px 0;
+	list-style: none;
+	list-style-image: none;
+	background: url(../images/site/dotted-small.png) repeat-x left bottom;
+}
+#marketplace_item ul.item_list li.discount {
+	background:#fffad7;
+	padding:10px;
+	border-right:1px solid #f4d4a7;
+	border-bottom:1px solid #f4d4a7;
+}
+#marketplace_item ul.item_list li.contact {
+	background:none;
+	padding:0;
+	margin:0;
+}
+
+#marketplace_item ul.item_list li.images ul {
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+#marketplace_item ul.item_list li.images li {
+	margin: 0 10px 10px 0;
+	padding: 0;
+	display: block;
+	float: left;
+}
+
+#marketplace_item ul.item_list li.images li a {
+	display: block;
+	float: left;
+}
+#marketplace_item ul.item_list li.contact {
+	margin-bottom: 0;
+}
+#marketplace_item .contact dt, #marketplace_item .contact dd {
+	float: left;
+}
+
+#marketplace_item .contact dt {
+	width: 100px;
+}
+
+.marketplace #recent_list .fl {
+	width:450px;
+}
+.marketplace #recent_list h4 {
+	margin-bottom:8px;
+}
+.marketplace #recent_list .content li {
+	line-height:1em;
+	margin-bottom:1px;
+}
+/*-------------------------------------------- Marketplace sign up side bar */
+
+#marketplace_sidebar {
+	font-size:0.75em;
+}
+#marketplace_sidebar .box {
+	margin-bottom:15px;
+}
+/*-------------------------------------------- Marketplace Landing Page */
+#market_content {
+	font-size:0.75em;
+}
+#market_content h2 {
+	margin-top:15px;
+}
+
+#market_content img.cart {
+	float:right;
+	margin-top:20px;
+}
+#market_content  .info {
+	float:left;
+	width:360px;
+}
+#market_content .register {
+	padding-top:15px;
+}
+
+/*-------------------------------------------- Daily Deal */
+div.dailydeal #post img.img {
+	float: left;
+	margin: 0 20px 0 20px;
+}
+
+/*-------------------------------------------- Give Aways */
