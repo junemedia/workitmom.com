@@ -116,11 +116,11 @@ if (date('m') == 8) {
 }
 
 if (date('m') == 9 || date('m') == 10) {
-	$giveaway_title = "Win a fitmark sports tote - now extended through October!";
-	$giveaway_text = "At Work It Mom, we give away some of the best mom gear out there, like The Fitmark Sports Tote! We've extended the giveaway so just sign up for our newsletters and you'll also be entered to win! Entries will be accepted until October 31, 2014 at 11:59 PM CDT. Good luck!";
+	$giveaway_title = "Coming Soon ... ";
+	$giveaway_text = "";
 	$giveaway_top_img = "";
-	$giveaway_right_img = "http://pics.workitmom.com/giveaway/Fitmark_Product.png";
-	$giveaway_extra_right_img = '<br><br><img src="http://pics.workitmom.com/giveaway/Fitmark_Logo.png" style="max-width:210px;">';
+	$giveaway_right_img = "";
+	$giveaway_extra_right_img = '';
 }
 
 if (date('m') == 11 || date('m') == 12) {
@@ -225,60 +225,66 @@ function check_fields() {
 	</div>
 	<div class="bot"></div>
 </div>
-<table width="750px">
-  <tr>
-	<td rowspan="2" align="center" valign="top"><img style="max-width:380px;" src="<?php echo $giveaway_right_img; ?>"><?php echo $giveaway_extra_right_img; ?></td>
-	<td style="border:none;">		
-		<?php if($giveaway_top_img!=""){ ?><p><img src="<?php echo $giveaway_top_img; ?>"></p><?php }?>
-		<p style="font: 12px Arial, Helvetica, sans-serif;width:540px;padding-bottom: 25px;">
-			<?php echo $giveaway_text; ?>
-		</p>
-		<p></p>
-	</td>
-  </tr>
-<tr>
-	<td valign="top" align="left">
-	<!-- form starts -->
-			<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-			<style type="text/css">
-				#mc_embed_signup{background:#E8E8E8; clear:left; font:14px Helvetica,Arial,sans-serif;  width:300px; margin:0 auto;}
-				/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-				   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-				#mc_embed_signup .asterisk {color:#c60; font-size:125%;}
-			</style>
-			<div id="mc_embed_signup">
-			<form action="/giveaway" method="POST">
-			<input type="hidden" name="guid" id="guid" value="<?php echo $guid; ?>">
-			<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-			<div class="mc-field-group">
-				<label for="mce-FNAME">First Name  
-			</label>
-				<input type="text" value="<?php echo $FNAME; ?>" name="FNAME" class="" id="FNAME">
-			</div>
-			<div class="mc-field-group">
-				<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-			</label>
-				<input type="email" value="<?php echo $EMAIL; ?>" name="EMAIL" id="EMAIL">
-			</div>
-			<div class="mc-field-group input-group">
-			    <strong></strong>
-			    <ul><li><input type="checkbox" value="1" name="AGREE" id="AGREE"><label for="AGREE">
-			    I understand that by subscribing, I will also receive special offers from third party partners, and agree to Work It Mom  
-					<a href="/terms" target="_blank">Terms of Use</a>, and <a href="/privacy" target="_blank">Privacy Policy</a>.
-			    </label></li>
-			</ul>
-			</div>
-				<div id="mce-responses" style="clear:both;">
-					<div style="<?php echo $style; ?>"><?php echo $message;echo $pixel; ?><br><br></div>
-				</div>	<div style="clear:both;"><input style=" background:#aaa;" type="submit" value="Enter to Win!" name="submit" id="mc-embedded-subscribe" class="button" onclick="return check_fields();"></div>
-			</form>
-			</div>
-			<!--End mc_embed_signup-->
-	<!-- form ends -->
-	</td>
-	
-</tr>
-</table>
+
+<?php
+	/*
+	<table width="750px">
+		<tr>
+		<td rowspan="2" align="center" valign="top"><img style="max-width:380px;" src="<?php echo $giveaway_right_img; ?>"><?php echo $giveaway_extra_right_img; ?></td>
+		<td style="border:none;">		
+			<?php if($giveaway_top_img!=""){ ?><p><img src="<?php echo $giveaway_top_img; ?>"></p><?php }?>
+			<p style="font: 12px Arial, Helvetica, sans-serif;width:540px;padding-bottom: 25px;">
+				<?php echo $giveaway_text; ?>
+			</p>
+			<p></p>
+		</td>
+		</tr>
+		<tr>
+		<td valign="top" align="left">
+		<!-- form starts -->
+				<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+				<style type="text/css">
+					#mc_embed_signup{background:#E8E8E8; clear:left; font:14px Helvetica,Arial,sans-serif;  width:300px; margin:0 auto;}
+					#mc_embed_signup .asterisk {color:#c60; font-size:125%;}
+				</style>
+				<div id="mc_embed_signup">
+				<form action="/giveaway" method="POST">
+				<input type="hidden" name="guid" id="guid" value="<?php echo $guid; ?>">
+				<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+				<div class="mc-field-group">
+					<label for="mce-FNAME">First Name  
+				</label>
+					<input type="text" value="<?php echo $FNAME; ?>" name="FNAME" class="" id="FNAME">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+				</label>
+					<input type="email" value="<?php echo $EMAIL; ?>" name="EMAIL" id="EMAIL">
+				</div>
+				<div class="mc-field-group input-group">
+					<strong></strong>
+					<ul><li><input type="checkbox" value="1" name="AGREE" id="AGREE"><label for="AGREE">
+					I understand that by subscribing, I will also receive special offers from third party partners, and agree to Work It Mom  
+						<a href="/terms" target="_blank">Terms of Use</a>, and <a href="/privacy" target="_blank">Privacy Policy</a>.
+					</label></li>
+				</ul>
+				</div>
+					<div id="mce-responses" style="clear:both;">
+						<div style="<?php echo $style; ?>"><?php echo $message;echo $pixel; ?><br><br></div>
+					</div>	<div style="clear:both;"><input style=" background:#aaa;" type="submit" value="Enter to Win!" name="submit" id="mc-embedded-subscribe" class="button" onclick="return check_fields();"></div>
+				</form>
+				</div>
+				<!--End mc_embed_signup-->
+		<!-- form ends -->
+		</td>	
+	</tr>
+	</table>
+
+	*/
+?>
+
+<div style="width:650px;height:400px;"></div>
+
 
 </body>
 </html>
