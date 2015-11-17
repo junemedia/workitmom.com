@@ -58,8 +58,8 @@ class PHPMailer
      * Sets the From email address for the message.
      * @var string
      */
-    var $From               = "localhost.localdomain";
-
+    //var $From               = "localhost.localdomain";
+    var $From		   = "info@workitmom.com";
     /**
      * Sets the From name of the message.
      * @var string
