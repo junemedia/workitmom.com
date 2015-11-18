@@ -670,12 +670,12 @@ class Database
 		$path = BLUPATH_BASE.'/log.sql';
 		
 		/* Write to file */
-		//$handle = fopen($path, 'at');
-		//$written = fwrite($handle, "\n".'['.date('d:m:y H:i:s.u').'] '.$text);
-		//fclose($handle);
+		$handle = fopen($path, 'at');
+		$written = fwrite($handle, "\n".'['.date('d:m:y H:i:s.u').'] '.$text);
+		fclose($handle);
 		
 		/* Return */
-		//return (bool) $written;
+		return (bool) $written;
 		
 	}
 }

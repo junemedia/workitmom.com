@@ -93,10 +93,8 @@ class Error
 			case E_RECOVERABLE_ERROR:
 				$this->_handleWarning();
 		        break;
-            case E_STRICT:
-                break;
-            case E_DEPRECATED:
-                break;
+case E_STRICT:
+break;
 			case E_USER_NOTICE:
 		    case E_NOTICE:
 		    default:
@@ -116,30 +114,30 @@ class Error
 	protected function _handleFatal()
 	{
         // Fatal error, send 500
-        if (!headers_sent()) {
-	    	header('HTTP/1.1 500 Internal Server Error');
-	    }
+       // if (!headers_sent()) {
+	    	//header('HTTP/1.1 500 Internal Server Error');
+	 //   }
+header('HTTP/1.1 200 OK');
 	    
 	    // Log error
 	    $errorLine = $this->_logError(true);
 
 	    // Send for help
 	    
-	    mail('leonz@silvercarrot.com,samirp@silvercarrot.com',
-	    	'Fatal Error on '.$_SERVER['HTTP_HOST'] . ' - ' . $_SERVER['SERVER_ADDR'],
-		'Server IP: ' . $_SERVER['SERVER_ADDR'] . "\n".
-		'Client IP: ' . $_SERVER['REMOTE_ADDR'] . "\n".
-	    	$errorLine[3]."\n".
-	    	'Severity: '.$errorLine[2]."\n".
-	    	'File: '.$errorLine[4]."\n".
-	    	'Line: '.$errorLine[5]."\n".
-	    	'Stack: '.str_replace('>>>', "\n      ", $errorLine[6])."\n".
-	    	'Visitor ID: '.$errorLine[0]."\n".
-	    	'URI: '.$errorLine[7]."\n",
-	    	'From: leon.zhao.R4L <leonz@silvercarrot.com>');
-	    
+	    /*mail('leonz@silvercarrot.com',
+	    	'Fatal Error on '.$_SERVER['HTTP_HOST'],
+	    	'Oh noes, the following happened:'."\r\n\r\n".
+	    	$errorLine[3]."\r\n\r\n".
+	    	'Severity: '.$errorLine[2]."\r\n".
+	    	'File: '.$errorLine[4]."\r\n".
+	    	'Line: '.$errorLine[5]."\r\n\r\n".
+	    	'Stack: '.str_replace('>>>', "\r\n      ", $errorLine[6])."\r\n\r\n".
+	    	'Visitor ID: '.$errorLine[0]."\r\n".
+	    	'URI: '.$errorLine[7]."\r\n",
+	    	'From: leon.zhao.workitmom <leonz@silvercarrot.com>');
+	    */
 	    // Output lies
-	    echo '
+	    /*echo '
 		    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 			<html xmlns="http://www.w3.org/1999/xhtml">
 			<head>
@@ -169,12 +167,63 @@ class Error
 				<h1>We\'re doing some important updates to our site...</h1>
 				<p>It\'s only going to take a minute so please bear with us. We\'ll be back up very, very soon!</p>
 			</body>
+			</html>';*/
+		echo '
+		    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+			<html xmlns="http://www.w3.org/1999/xhtml">
+			<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<title>We\'re currently doing some important updates!</title>
+			<style type="text/css">
+			<!--
+			body {
+				font-family: Georgia, "Times New Roman", Times, serif; 
+				color:#222;
+				padding:80px 40px;
+				text-align:center	
+			}
+			h1 {
+				font-size:28px;
+				margin-bottom:10px;
+				font-style:italic;
+			}
+			p {
+				font-size:17px;
+				font-style:italic;
+			}
+			-->
+			</style>
+			</head>
+			<body>
+				<h1>We\'re sorry.</h1>
+				<p>But the page that you requested is no longer available. <br/>We will take you to our home page in a few seconds or you can click <a href="http://www.workitmom.com">here</a>.</p>
+				<div>
+				<script language="javascript">
+				var i = 5;
+				window.onload=redirect;
+				function redirect()
+				{
+				    var time = document.getElementById("time");
+				    i--;
+				    //time.innerHTML = "You will redirect to search page after "+i+"s.";
+				    setTimeout("redirect()",1100);
+					if(i<0)
+					{
+						i = 5;
+					}
+				    if(i==0)
+				    {
+						i = 5;
+				        location.replace("http://www.workitmom.com");
+				    }
+				}
+				</script>
+				<span id="time">
+				</span>
+				</div>
+			</body>
 			</html>';
-		if(LEON_DEBUG){
-            		echo "<h1 style='color:#FF6600;'>Leon's Debug Information for reference:</h1>";
-            		$document = Document::getInstance('print');
-            		echo $document->printDebugInfo();
-        	}
+
 		exit;
 	}
 
@@ -284,22 +333,15 @@ class Error
 			$traceObject*/
 		);
 
-		$humanErrorString = '#wimerrors';
+		$humanErrorString = '#WIM Error ';
 		$errorType = self::$_errorLevels[$this->errorType];
 		$humanErrorString .=
-			'blucrit=============='.date('r').'=============='."\n".
-			'r4l  threw an error of type '.$errorType.': '.$this->errorMessage."\n".
+			'=============='.date('r').'=============='."\n".
+			'WIM  threw an error of type '.$errorType.': '.$this->errorMessage."\n".
 			$this->errorFile." (".$this->errorLine.")\n".
 			$backTraceLine.
 			"\nhttp://".$_SERVER['SERVER_NAME'].$requestUri."\n";
-		if(LEON_DEBUG){		
-			$type = self::$_errorLevels[$this->errorType];
-			$message = $this->errorMessage;
-			$file = $this->errorFile;
-			$line_debug = $this->errorLine;
-			$traceString = implode('<br />', $errorLines);
-			self::_displayError($type, $message, $file, $line_debug, $traceString);
-		}
+
 		// Output to CSV error log
 		//if (DEBUG) {
 			//if ($socket == false) {
@@ -329,20 +371,25 @@ class Error
 		}
 		*/
 		            //if($_SERVER["REMOTE_ADDR"] == "127.0.0.1")
-            //if(($_SERVER["REMOTE_ADDR"] == "66.54.186.254") || ($this->errorType == 1))
-	
-	    if(($this->errorType == 1) || ($_SERVER["REMOTE_ADDR"] == "66.54.186.254"))
+            if($_SERVER["REMOTE_ADDR"] == "216.180.167.121")
             {
                 $this->_saveError($errorLines);
-                
-                //$file = dirname(__FILE__) . '/../../errorLog.csv';
-                //$fp = fopen($file, 'a');
+                /*
+                $file = dirname(__FILE__) . '/errorLog.csv';
+                $fp = fopen($file, 'a');
                 //fputcsv($fp, $line);
-		//fwrite($fp, $humanErrorString);
-                //fclose($fp);            
-                
+		fwrite($fp, $humanErrorString);
+                fclose($fp);
+		*/
+		/*	
+                $type = self::$_errorLevels[$this->errorType];
+                $message = $this->errorMessage;
+                $file = $this->errorFile;
+                $line = $this->errorLine;
+                $traceString = implode('<br />', $errorLines);
+		self::_displayError($type, $message, $file, $line, $traceString);            
+               */
             }
-	
 		return $line;
 	}
 	
@@ -360,19 +407,23 @@ class Error
 	protected static function _displayError($type, $message, $file, $line, $trace)
 	{
 		echo '<table style="border-collapse: collapse;">
+			<thead>
 				<tr>
-					<td style="padding: 2px 2px; border: 2px solid #CCCCFF; background: #CCCCFF; color: #000; font-family:Courier New; font-size: 14px; font-weight: normal;">
-						<span style="padding: 0; margin: 0 0 5px 0; font-family:Courier New;">
-							<b>'.$type.'</b>:<br> <font style="font-family:Courier New;color:#FF6600; font-weight:bold;">'.htmlentities($message).'</font>
-						</span><br>
-						<font style="color:green">'.$file.'</font> <font style="color:red;font-weight:bold">('.$line.')</font>
-					</td>
+					<th style="padding: 8px 5px; border: 1px solid #e98400; background: #ffae00; color: #000; font-family: Arial; font-size: 14px; font-weight: normal;">
+						<div style="padding: 0; margin: 0 0 5px 0; font-family: Arial;">
+							'.$type.': <strong style="font-family: Arial;">'.htmlentities($message).'</strong>
+						</div>
+						'.$file.' ('.$line.')
+					</th>
 				</tr>
+			</thead>
+			<tbody>
 				<tr>
-					<td style="padding: 5px; border: 2px solid #CCCCFF; background: #fff; color: #000; font-family:Courier New; font-size: 12px; color:gray;">
+					<td style="padding: 5px; border: 1px solid #e98400; background: #fff; color: #000; font-family: Arial; font-size: 12px;">
 						'.$trace.'
 					</td>
 				</tr>
+			</tbody>
 		</table>';
 	}
 
@@ -392,8 +443,7 @@ class Error
         //global $timeStartLog;
         $data = array();
 
-        $data['level'] = self::$_errorLevels[$this->errorType] . ' - ' . $_SERVER["REMOTE_ADDR"];
-	//$data['level'] = self::$_errorLevels[$this->errorType];
+        $data['level'] = self::$_errorLevels[$this->errorType];
         $data['url'] = $_SERVER['REQUEST_URI'];
         $data['message'] = $this->errorMessage;
         $data['file'] = $this->errorFile;

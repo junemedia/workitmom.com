@@ -17,6 +17,7 @@ class WorkitmomNewitemsModel extends BluModel {
 		// Get basic item details
 		$cacheKey = 'item_'.$itemId;
 		$item = $this->_cache->get($cacheKey);
+
 		if ($item === false) {
 			$query = 'SELECT a.*, acs.articleCategoryID AS `categoryId`
 				FROM article AS a

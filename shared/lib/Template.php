@@ -516,7 +516,6 @@ class Template
 			} //else {
 				/* Item image doesn't exist: get item author's image. */
 				//return self::image($object->author, $width, $height, $zoomCrop);
-		
 			//}
 			
 		} else if ($object instanceof PersonObject) {

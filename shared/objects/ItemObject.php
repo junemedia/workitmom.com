@@ -229,7 +229,6 @@ abstract class ItemObject extends BluObject implements CommentsInterface {
 					AND c.commentType = 'article'
 					AND c.commentDeleted != 1
 				ORDER BY c.commentTime DESC";
-				
 			try {
 				$records = $this->_fetch($query, null, null, null, false);
 			} catch(NoDataException $exception){

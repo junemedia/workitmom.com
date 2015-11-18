@@ -106,22 +106,17 @@ class BluApplication
 	 */
 	private function __construct()
 	{
-
+		// Get config name from domain if in DEBUG mode
+		if (DEBUG) {
+			$subDomains = explode('.', $_SERVER['HTTP_HOST']);
+			if (file_exists(BLUPATH_BASE.'/config.'.$subDomains[1].'.php')) {
+				self::$_configName = $subDomains[1];
+			}
+		}
 		// Register error handler
 		register_shutdown_function(array(new Error(),'shutdownHandler'));
 		set_exception_handler(array(new Error(), 'handleException'));
 		set_error_handler(array(new Error(),'handleError'));
-
-
-
-		// Get config name from domain if in DEBUG mode
-		//if (DEBUG) {
-		//	$subDomains = explode('.', $_SERVER['HTTP_HOST']);
-		//	if (file_exists(BLUPATH_BASE.'/config.'.$subDomains[1].'.php')) {
-		//		self::$_configName = $subDomains[1];
-		//	}
-		//}
-
 		// Get arguments from request URI
 		$baseUrl = self::getSetting('baseUrl');
 		self::$_uri = preg_replace('$^'.$baseUrl.'/$', '', $_SERVER['REQUEST_URI']).'/';
@@ -318,7 +313,24 @@ class BluApplication
 	{
 		static $instance;
 		if (!is_object($instance)) {
-			$instance = Database::getInstance(self::getSetting('databaseHost'), self::getSetting('databaseUser'), self::getSetting('databasePass'), self::getSetting('databaseName'));
+			
+			/*
+			 * Added by Leon
+			 * Initialize the mutipul databases
+			 */
+			if ($databases = self::getSetting('databases', false)) {
+				$database = $databases[array_rand($databases)];
+			} else {
+				$database = Array ( 	'databaseHost' => self::getSetting('databaseHost'),
+							'databaseUser' => self::getSetting('databaseUser'),
+							'databasePass' => self::getSetting('databasePass'),
+							'databaseName' => self::getSetting('databaseName'));
+			}
+			$instance = Database::getInstance($database['databaseHost'], $database['databaseUser'], $database['databasePass'], $database['databaseName']);
+
+			//The original database instance
+			/*
+			$instance = Database::getInstance(self::getSetting('databaseHost'), self::getSetting('databaseUser'), self::getSetting('databasePass'), self::getSetting('databaseName'));*/
 		}
 		return $instance;
 	}

@@ -144,6 +144,7 @@ abstract class BluModel
 			$data =$this->_cache->get($cacheKey);
 		}
 		if (in_array($_SERVER['REMOTE_ADDR'], array('66.54.186.254'))) {
+		//	$this->_cache->delete($cacheKey);
 			$data = false;
 		}
 		/* Cache miss? */

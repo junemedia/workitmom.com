@@ -816,6 +816,115 @@ class WorkitmomItemsModel extends BluModel {
 		$args['supportMessageSubType'] = 'feedback';
 		*/
 	}
+	
+	public function getRssFeed($offset=0, $limit=1, &$total)
+	{
+		/* Get parameters */
+		$offset = (int)$offset;
+		$limit = (int)$limit;
+
+		$cacheKey = "latest_rssfeed";
+		$cacheFile = BLUPATH_CACHE."/data/$cacheKey.cache";
+		$records = array();
+		if(file_exists($cacheFile))
+		{
+			$records = include $cacheFile;//$this->_getCache($cacheKey,86400);
+		}
+		
+		/*if(!$records)
+		{
+			$query = 'SELECT `blogHosted` FROM `blogs` WHERE `blogHosted` IS NOT NULL';
+			
+			//Get raw data
+			$this->_db->setQuery($query);
+			$blogrecords = $this->_db->loadAssocList();
+			
+			//Gernerate query for blogs
+			if(!empty($blogrecords))
+			{
+				foreach($blogrecords as $item)
+				{
+					$itemsquery[] = "(SELECT id, post_author, post_title, guid, post_content, post_date"
+					." FROM wp_".$item['blogHosted']."_posts WHERE post_status = 'publish')";
+				}
+			}
+			
+			$blogsquery = implode(" UNION ALL ",$itemsquery);
+			$blogsquery = "SELECT a.id,post_title AS title, b.user_nicename AS author, guid AS url,post_content AS description, post_date AS livedate, 'blogpost' AS rsstype 
+							FROM (".$blogsquery.") AS a LEFT JOIN wp_users AS b ON a.post_author = b.ID ORDER BY post_date desc LIMIT ".$offset.",".$limit;
+							
+			//print_r($blogsquery);exit;
+			$query = ' CREATE TEMPORARY TABLE rsspost 
+						(
+						 id int(16) not null,
+						 title varchar(255) not null,
+						 author varchar(255),
+						 url mediumtext,
+						 description mediumtext,
+						 livedate datetime not null,
+						 rsstype varchar(50)
+						)';
+			$this->_db->setQuery($query);
+			$this->_db->query();
+
+			$query = "INSERT INTO rsspost (".$blogsquery.")";
+			//echo $query;exit;
+			$this->_db->setQuery($query);
+			$this->_db->query();
+			
+			$query = "INSERT INTO rsspost (SELECT articleID,articleTitle AS title, b.username AS author, articleLink AS url,articleBody AS description, articleTime AS livedate,articleType AS rsstypes
+	 FROM article AS a LEFT JOIN users AS b ON a.articleAuthor  = b.UserID WHERE articleLive = 1 AND articleType = 'article' ORDER BY articleTime desc LIMIT ".$offset.",".$limit.")";
+			$this->_db->setQuery($query);
+			$this->_db->query();
+			
+			$query = 'SELECT * FROM rsspost ORDER BY livedate DESC';
+			$this->_db->setQuery($query,$offset,$limit);
+			$records = $this->_db->loadAssocList();	
+			
+			//$records = $this->_db->loadAssocList();
+			$total = $this->_db->getFoundRows();
+
+			$query = "DROP TABLE rsspost";
+			$this->_db->setQuery($query);
+			$this->_db->query();
+			$this->_setCache($cacheKey,$records);
+		}*/
+		/* Get wrapped data */
+		//$return = null;
+		foreach($records as &$item)
+		{
+			if($item['rsstype'] == 'article')
+			{
+				$item[0] = array('articleId'=>$item['id']);
+				$item = $this->_wrapItem($item);
+			}
+		}		
+
+		/* spit out */
+		return $records;
+	}
+	
+	private function _getCache($key,$expire = 3600){
+        $cacheFile = BLUPATH_CACHE."/data/$key.cache";
+        if((file_exists($cacheFile)) &&((time() - filectime($cacheFile)) > $expire)){
+            // expired
+            $item = false;
+        }else{
+            // We will use the cached one.
+            $item = include $cacheFile;
+        }
+        return $item; 
+    }
+    
+    private function _setCache($key,$content){
+        $cacheFile = BLUPATH_CACHE."/data/$key.cache";
+        $content = var_export($content, true);
+        $content = '<?php return '.$content.'; ?>';
+
+        // Create the cache object.
+        file_put_contents($cacheFile, $content,LOCK_EX);
+        return true;        
+    }
 
 }
 ?>

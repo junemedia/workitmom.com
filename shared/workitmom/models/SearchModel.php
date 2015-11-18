@@ -34,7 +34,7 @@ class WorkitmomSearchModel extends BluModel {
 					FROM search AS s) AS m
 			WHERE '.$matchClause.$typeClause.$excludeClause.'
 			GROUP BY s.thingLink
-			ORDER BY score DESC'; 
+			ORDER BY score DESC';
 		$this->_db->setQuery($query, $offset, $limit);
 		$items = $this->_db->loadAssocList('thingLink');
 		$total = $this->_db->getFoundRows();

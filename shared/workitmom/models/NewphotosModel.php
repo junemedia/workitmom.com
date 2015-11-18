@@ -81,6 +81,10 @@ class WorkitmomNewphotosModel extends BluModel {
 					case 'user':
 						$query['where'][] = 'i.imageOwner = '.(int) $value;
 						break;
+						
+					case 'status':
+						$query['where'][] = 'i.imageLive = '.(int) $value;
+						break;
 				}
 			}
 		}
@@ -144,7 +148,9 @@ class WorkitmomNewphotosModel extends BluModel {
 			'comment_count' => $photo_base['comment_count'],
 			'link' => '/photoalbum/photo/'.$photo_base['imageID'].'/',
 			'image' => $photo_base['url'],
-			'imageDirectory' => 'user'
+			'imageDirectory' => 'user',
+			'time' => $photo_base['uploadDate'],
+			'status' => $photo_base['imageLive']
 		);
 		
 		/* Get author */
@@ -162,6 +168,49 @@ class WorkitmomNewphotosModel extends BluModel {
 		
 		/* Return */
 		return $photo;
+		
+	}
+	
+	public function updatePhoto($photoId, array $photoDetail)
+	{
+		/* Sanitise ID */
+		$photoId = (int) $photoId;
+		
+		$options = array();
+		if(!empty($photoDetail))
+		{
+			foreach($photoDetail as $key => $value)
+			{
+				$options[] = $key.'="'.$value.'"';
+			}
+		}
+		$query = 'UPDATE images SET '.implode(',',$options).' WHERE imageID='.(int)$photoId;
+
+		$this->_db->setQuery($query);
+		return $this->_db->query();		
+		
+		/* Build arguments */
+		//$args = array('commentDeleted' => 1);
+		//$criteria = array('commentID' => (int)$commentId);
+		
+		/* Commit */
+		//$deleted = $this->_edit('comments', $args, array(), $criteria);
+	}
+	
+	/**
+	 *	Delete a photo
+	 */
+	public function delete($userId,$photoId){		
+		
+		// Get data from request
+		$photoId = (int)$photoId;
+
+		// Delete photo
+		$photosModel = BluApplication::getModel('photos');
+		$deleted = $photosModel->removeUserPhoto((int)$userId, $photoId);
+		
+		/* Return */
+		return $deleted;
 		
 	}
 
