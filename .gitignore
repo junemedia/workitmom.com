@@ -1,0 +1,43 @@
+config.php
+
+# Sitemaps etc.
+generator/data/
+sitemap.xml
+sitemap.xml.gz
+sitemap[0-9].xml
+sitemap[0-9].xml.gz
+web_sitemap_*.xml
+web_sitemap_*.xml.gz
+
+# miscellany
+log.sql
+openads.recent.backup/
+openads/
+openx-2.8.4/
+
+leon/
+
+# old subversion directories
+.svn/
+
+# this dir is already in repo but I don't *think* it needs to be,
+# ignore untracked files for now
+uploads/
+
+# Github WordPress gitignore
+bloggers/*.log
+bloggers/.htaccess
+bloggers/sitemap.xml
+bloggers/sitemap.xml.gz
+bloggers/wp-config.php
+bloggers/wp-content/advanced-cache.php
+bloggers/wp-content/backup-db/
+bloggers/wp-content/backups/
+bloggers/wp-content/blogs.dir/
+bloggers/wp-content/cache/
+bloggers/wp-content/upgrade/
+bloggers/wp-content/uploads/
+bloggers/wp-content/wp-cache-config.php
+bloggers/wp-content/plugins/hello.php
+bloggers/readme.html
+bloggers/license.txt
