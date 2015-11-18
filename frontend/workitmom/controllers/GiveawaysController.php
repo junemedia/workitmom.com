@@ -14,7 +14,7 @@ class WorkitmomGiveawaysController extends ClientFrontendController {
 	 *	Default (details) page.
 	 */
 	public function view(){
-	
+		
 		return $this->_redirect('/');
 
 		/* Get data */
@@ -63,7 +63,7 @@ class WorkitmomGiveawaysController extends ClientFrontendController {
 		$success = (bool) $commentsModel->addComment($args);
 
 		/* Add message */
-		$message = $success ? 'Thankyou for commenting.' : 'Sorry, your comment could not be saved, please try again.';
+		$message = $success ? 'Thank you for commenting.' : 'Sorry, your comment could not be saved, please try again.';
 		$messageType = $success ? 'info' : 'error';
 
 		/* Redirect */
@@ -116,6 +116,7 @@ class WorkitmomGiveawaysController extends ClientFrontendController {
 	 *	View comments: request handler.
 	 */
 	public function view_comments(array $options = array()){
+
 		/* Get comments */
 		$commentsModel = $this->getModel('comments');
 		$comments = $commentsModel->getAny('article', $this->_giveaway['articleID']);

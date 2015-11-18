@@ -301,15 +301,26 @@ class WorkitmomProfileController extends WorkitmomCommentsController {
 		/* Data */
 		$person =& $this->_person;
 		$total = null;
-		$photos = $photosModel->getPhotos(0, 12, $total, array(
-			'user' => $person->userid,
-			'order' => 'date'
-		));
-		$photosModel->addDetails($photos);
-
+		
 		// Display-data
 		$userModel = $this->getModel('user');
 		$isSelf = $userModel->isSelf($person);
+		
+		$options = array(
+			'user' => $person->userid,
+			'order' => 'date'
+		);
+
+		if(!$isSelf)
+		{
+			$options['status'] = 1;
+		}
+		$photos = $photosModel->getPhotos(0, 12, $total,$options );
+		$photosModel->addDetails($photos);
+
+		// Display-data
+		/*$userModel = $this->getModel('user');
+		$isSelf = $userModel->isSelf($person);*/
 
 		/* Load template */
 		include(BLUPATH_TEMPLATES.'/profile/blocks/photos.php');

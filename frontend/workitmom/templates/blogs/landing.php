@@ -46,7 +46,7 @@
 			</div>
 
 			<div class="clear"></div>
-			
+
 			<?php BluApplication::getModules('site')->bottom_blocks(); ?>
 
 		</div>

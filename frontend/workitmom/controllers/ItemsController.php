@@ -388,7 +388,7 @@ abstract class WorkitmomItemsController extends WorkitmomCommentsController {
 	 *	Allow space for an ad to sit under browse/categories bar.
 	 */
 	protected function listing_ad() {
-		echo Template::makeAd(OpenX::AD_SKY1, $this->_doc->getAdPage());
+		include(BLUPATH_TEMPLATES . '/site/ads/WEBSITE_LEFT_BANNER_2.php');
 	}
 
 	/**
@@ -695,20 +695,43 @@ abstract class WorkitmomItemsController extends WorkitmomCommentsController {
 	{
 		$this->_doc->setFormat('xml');
 		$this->_doc->setMimeType('application/rss+xml');
-
+		
+		$total = 0;
+		$format = Request::getString('format', 'rss');
+		
 		/* Get items */
 		$itemsModel = $this->getModel('items');
-		$latestitems = $itemsModel->getLatest($this->_itemtype, 0, 25);
+		switch($format)
+		{
+			case "xml":
+				$latestitems = $itemsModel->getLatest($this->_itemtype, 0, 25);
+				break;
+			
+			case "rss":
+				$latestitems = $itemsModel->getRssFeed(0, 25, $total);
+				break;
+		}
 
 		ob_start();
 
 		include (BLUPATH_TEMPLATES . '/items/rss/XML_header.php');
 		foreach((array)$latestitems as $li) {
-			$li_title = $li->title;
-			$li_author = $li->author->name;
-			$li_link = SITEINSECUREURL . $this->_getItemURL($li);
-			$li_description = Text::trim($li->body);
-			$li_date = date("r", strtotime($li->getRawDate()));
+			if(is_array($li))
+			{
+				$li_title = $li['title'];
+				$li_author = $li['author'];
+				$li_link = $li['url'];
+				$li_description = Text::trim($li['description'])."...";
+				$li_date = date("r", strtotime($li['livedate']));
+			}
+			else
+			{
+				$li_title = $li->title;
+				$li_author = $li->author->name;
+				$li_link = SITEINSECUREURL . $this->_getItemURL($li);
+				$li_description = Text::trim($li->body);
+				$li_date = date("r", strtotime($li->getRawDate()));
+			}
 			include (BLUPATH_TEMPLATES . '/items/rss/XML_item.php');
 		}
 		include (BLUPATH_TEMPLATES . '/items/rss/XML_footer.php');
@@ -717,6 +740,5 @@ abstract class WorkitmomItemsController extends WorkitmomCommentsController {
 	}
 
 }
-
 
 ?>

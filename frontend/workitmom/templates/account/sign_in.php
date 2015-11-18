@@ -23,11 +23,11 @@
 						<h2>Sign In</h2>
 
 						<div class="standardform"><div class="formholder">
-							<form name="form_sign_in" id="form_sign_in" action="<?= SITEURL; ?>/account/login/" method="post">
+							<form name="form_sign_in" id="form_sign_in" action="<?= SITEURL; ?>/account/login/" method="get">
 
 								<label>Username or Email Address</label>
 								<input name="form_identifier" class="textinput required" type="text" id="form_identifier" size="30" />
-								
+
 								<?php Template::startScript(); ?>
 								$('form_identifier').focus();
 								<?php Template::endScript(); ?>

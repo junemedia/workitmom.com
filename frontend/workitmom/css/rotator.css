@@ -1,0 +1,198 @@
+/*IE6*/
+.rounded h2.main
+{
+	zoom: 0;
+	height: 100%;
+}
+#featured_recipe ul {
+	zoom: 1;
+}
+
+
+/*IE7*/
+#featured_recipe ul {
+	zoom: 1;
+}
+
+/*Index*/
+/*-------------------------------------------- Featured Recipe */
+
+#featured_recipe {
+	background: #FFF;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+#panel-center #featured_recipe div.content {
+	padding-bottom: 0;
+}
+
+#featured_recipe h3 {
+	margin-top: 10px;
+	/*color: #1AB7EA;
+	font-size: 13pt;
+    font-weight: bold;
+	padding: 0px;
+	line-height: normal;*/
+	color: #2798BD;
+    font: bold 21px Arial,Helvetica,sans-serif;
+    letter-spacing: -1.05px;
+    text-transform: lowercase;
+}
+
+#featured_recipe p {
+	margin: 5px 0;
+}
+
+#featured_recipe .text-content
+{
+	font-size: 10pt;
+    line-height: 122%;
+}
+
+#featured_recipe .fr
+{
+	float: right;
+}
+
+#featured_recipe .rating
+{
+	font-size: 0.75em;
+    margin-top: 2px;
+}
+
+#featured_recipe .clear {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 1px;
+    line-height: 1px;
+    margin-bottom: -1px;
+    overflow: hidden;
+}
+
+#featured_recipe .clear2
+{
+	clear: both;
+}
+
+#featured_recipe .fl
+{
+	float: left;
+}
+
+#featured_recipe ul {
+	/*margin: 15px -15px 0;*/
+}
+
+#featured_recipe ul li {
+	display: block;
+	float: left;
+	list-style: none outside none;
+	padding:0px;
+}
+
+#featured_recipe li a {
+	display: block;
+	padding: 12px;
+	/*background: #e6e2d9;*/
+	border: 1px solid #EEEEEE;
+	border-right: 1px solid #FFF;
+	border-bottom: 0;
+}
+
+#featured_recipe li.first a {
+	border-left: 0;
+	padding-left: 15px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+}
+
+
+#featured_recipe li a.current {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-top-color: #FFFFFF;
+}
+
+#featured_recipe li.last a {
+	border-right: 0;
+	padding-right: 15px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+}
+
+#featured_recipe li a:hover {
+	background: #f6f3ed;
+}
+
+#featured_recipe li.current a {
+	border-top-color: #FFF;
+	background: #FFF;
+}
+
+
+/* Panels JS, please don't change... */
+#featured_recipe div#panels-holder {
+	/*width: 460px;*/
+	width: 610px;
+	overflow: hidden;
+	position: relative;
+}
+#featured_recipe div.panel {
+	float: left;
+	/*width: 460px;*/
+	width: 610px;
+	margin: 0px 20px;
+	padding: 0px;
+	overflow: hidden;
+	/*height: 280px;*/
+	height: 315px;
+}
+#featured_recipe div.panel  a
+{
+	color: #2798BD;
+    text-decoration: none;
+}
+
+#featured_recipe div.panel  img
+{
+	font-size: 10px;
+}
+
+#featured_recipe div.content {
+    padding-bottom: 0;
+}
+
+
+#featured_recipe div#panels-holder {
+    overflow: hidden;
+    position: relative;
+    /*width: 460px;*/
+	width:610px;
+}
+
+#panels-inner,#featured_recipe div#panels-holder,#featured_recipe div.panel,#featured_recipe div.panel  a
+{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fr_rounded {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: #FFF;
+	border-bottom: 1px solid #ccc6b9;
+}
+
+.fr_rounded h2.main {
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	padding: 6px 12px;
+	background: #fca918;
+	color: #FFF;
+}

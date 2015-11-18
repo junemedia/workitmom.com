@@ -56,7 +56,7 @@ if ($_POST['submit'] == 'Enter to Win!') {
 				break;
                 */
 			default:
-				$subcampid = '4341';    // WIM Default Giveaway 0615
+				$subcampid = '4371';    // WIM Default Giveaway 0615
 		}
 		
 		$ipaddr = trim($_SERVER['REMOTE_ADDR']);

@@ -158,6 +158,9 @@ class WorkitmomConnectController extends WorkitmomCategoriesController {
 				break;
 		}
 		
+		/*Filter live photos*/
+		$options['status'] = 1;
+		
 		/* Get data */
 		$photosModel = $this->getModel('newphotos');
 		$photos = $photosModel->getPhotos($offset, $limit, $total, $options);

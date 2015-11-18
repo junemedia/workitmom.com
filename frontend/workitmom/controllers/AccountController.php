@@ -1324,16 +1324,51 @@ class WorkitmomAccountController extends ClientFrontendController
 		if ($errors) {
 			return $this->_showMessages('photos');
 		}
-
+		
+		$newPhotos = array();
+		
 		// Move uploaded files to their correct location
 		if (!empty($assets)) {
 			$photosModel = BluApplication::getModel('photos');
 			foreach ($assets as $uploadId => $file) {
-				$photosModel->addUserPhoto($user->userid, $uploadId, $file, $file['caption']);
+				$newPhotos[] = $photosModel->addUserPhoto($user->userid, $uploadId, $file, $file['caption']);
 			}
 			Upload::clearQueue($queueId);
 		}
 
+		//Added by Howe
+		if(!empty($newPhotos))
+		{
+			$photosUrl = '';
+			foreach($newPhotos as $value)
+			{
+				$newPhotosModel = $this->getModel('newphotos');
+				$photo = $newPhotosModel->getPhoto($value);
+				$photosUrl .= '<span>Image title:'.$photo['title'].'<span/><br><img src="http://www.workitmom.com/assets/userimages/200/200/1/'.$photo['image'].'" ><br>';
+			}
+		}
+		
+		$to = "allisons@silvercarrot.com,hillarym@silvercarrot.com,jenniferj@silvercarrot.com";
+		$subject = "New photo(s) uploaded";
+
+		$message = "<html>
+						<head>
+						  <title>New photo(s) uploaded</title>
+						</head>
+						<body>
+						 <span>Hi Editor:</span><br><br>
+						There are some new photos have been uploaded by ".$user->username." , " .
+								"Please see below photo(s) and deal them in the backend<br><br>".$photosUrl.
+						"</body>
+					</html>";
+		$headers  = 'MIME-Version: 1.0' . "\r\n";
+		$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+		$headers .= 'To: Allison <allisons@silvercarrot.com>, Hillary <hillarym@silvercarrot.com>, Jennifer <jenniferj@silvercarrot.com>' . "\r\n";
+		$headers .= 'From: WorkItMom <admin@workitmom.com>' . "\r\n";
+
+		mail($to,$subject,$message,$headers);
+		//end
+		
 		// Done, view photos
 		return $this->_redirect('/account/photos?tab=manage', 'Your photos have been uploaded.');
 	}

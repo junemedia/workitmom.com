@@ -27,14 +27,14 @@ var poll = new PollVoter(<?= $poll->id; ?>, 'form#featured_poll').addTrigger('bu
 			<button name="submit"><span>Submit my vote</span></button>&nbsp;&nbsp;<button name="see"><span>See results</span></button>
 		</form>
 
-		<!-- removed at 20170717 <div class="divider"></div>
+		<div class="divider"></div>
 
 		<div id="discuss_poll">
 			<h3>Discuss this poll</h3>
 			<p class="text-content">Share your opinions in our discussion group!
 			<a href="<?= SITEURL.'/groups/discussion/'.$poll->pollForum; ?>" class="arrow">Discuss now</a></p>
 			<div class="clear"></div>
-		</div>-->
+		</div>
 
 	</div>
 

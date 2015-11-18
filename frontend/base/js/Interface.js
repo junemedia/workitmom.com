@@ -1789,6 +1789,187 @@ var PanelSlider = new Class({
 	}
 	
 });
+/**
+ *	Panel toggler.
+ */
+var Panels = new Class({
+
+	Implements: Options,
+
+	options: {
+		mode: 'horizontal',
+		transition: 'back:out',
+		duration: 900,
+		defaultPanel: 'intro',
+		indexElement: null,
+		rotate: 0,	// Rotate speed (ms)
+		updateHash: true
+	},
+	
+	holder: null,
+	panels: null,
+	keys: null,
+	fx: null,
+	nav: null,
+	indexElement: null,
+	links: null,
+	
+	/**
+	 *	Currently visible panel's ID
+	 */
+	current: null,
+	
+	/**
+	 *	Timer ID, (if rotating)
+	 */
+	timer: null,
+	
+	/**
+	 *	Constructor
+	 */
+	initialize: function(holder, nav, options) {
+		this.setOptions(options);
+		this.holder = $(holder);
+		this.nav = nav ? $(nav) : false;
+		this.indexElement = this.options.indexElement ? $(this.options.indexElement) : false;
+	
+		/* Hide overflow and create fx */
+		this.holder.setStyle('overflow-x', 'hidden');
+		this.fx = new Fx.Scroll(this.holder, {
+			transition: this.options.transition,
+			duration: this.options.duration,
+			link: 'cancel'
+		});
+		this.holder.set('tween', {
+			duration: this.options.duration - 100,
+			link: 'cancel'
+		});
+		
+		/* Add panels to hash and erase id to prevent nav on location hash update */
+		var panels = this.holder.getElements('div.panel');
+		this.panels = $H();
+		panels.each(function(panel, index) {
+			if (this.options.mode == 'vertical') {
+				panel.setStyle('float', 'none');
+			}
+			this.panels.set(panel.get('id'), panel);
+			panel.test = panel.id;
+			panel.erase('id');
+		}, this);
+		this.keys = this.panels.getKeys();
+		if (this.options.mode == 'vertical') {
+			this.holder.getElementById('panels-inner').setStyles({
+				'width': 'auto',
+				'padding-bottom': 1000
+			});
+		}
+		
+		/* Add tab events */
+		this.links = new Hash();
+		var links = this.nav ? this.nav.getElements('a') : [];
+		links.each(function(link) {
+			
+			/* Get target id */
+			var href = link.get('href');
+			var id = href.substr(href.indexOf('#') + 1);
+			
+			/* Add event */
+			link.addEvent('click', this.onTabClick.bindWithEvent(this, id));
+			
+			// Store reference
+			this.links.set(id, link);
+			
+		}, this);
+		
+		/* Mark current section active */
+		this._scrollTo(location.hash.substr(1) || this.options.defaultPanel);
+		
+		// Start rotating
+		if (this.options.rotate) {
+			this.start();
+		}
+	},
+	
+	/**
+	 *	Click handler
+	 */
+	onTabClick: function(event, id) {
+		var link = this.links.get(id);
+		link.blur();
+		
+		this._scrollTo(id);
+		
+		// Stop events
+		this.pause();
+		if ($defined(event)) {
+			event.stop();
+		}
+	},
+	
+	/**
+	 *	Scroll to a panel, setting all the display stuff too, i.e. CSS and location hash
+	 */
+	_scrollTo: function(id) {
+		
+		/* Update object */
+		this.current = id;
+		
+		/* Smooth scroll to new panel */
+		var panel = this.panels.get(this.current);
+		this.holder.tween('height', panel.getHeight());
+		
+		//this.fx.toElement(panel);
+		// getPosition is ballsed in the current version of moo, so we'll have this stupidity for now
+		this.fx.start(panel.offsetLeft, panel.offsetTop);
+		
+		/* Update index display */
+		if (this.indexElement) {
+			this.indexElement.set('html', this.keys.indexOf(this.current) + 1);
+		}
+		
+		/* Mark tab active */
+		this.links.each(function(link) { link.removeClass('current'); });
+		var currentLink = this.links.get(this.current);
+		if (currentLink) {
+			currentLink.addClass('current');
+		}
+		
+		/* Update location hash */
+		if (this.options.updateHash) {
+			location.hash = this.current;
+		}
+	},
+	
+	/** 
+	 *	Display next in line
+	 */
+	gotoNext: function() {
+		var index = this.keys.indexOf(this.current) + 1;
+		return this._scrollTo(this.keys[index % this.keys.length]);
+	},
+	
+	/**
+	 *	Display previous in line.
+	 */
+	gotoPrevious: function() {
+		var index = this.keys.indexOf(this.current) + this.keys.length - 1;	// Lol, JS
+		return this._scrollTo(this.keys[index % this.keys.length]);
+	},
+	
+	/**
+	 *	Start rotating through the panels
+	 */
+	start: function(speed) {
+		this.timer = this.gotoNext.periodical(speed || this.options.rotate, this);
+	},
+	
+	/**
+	 *	Pause any rotation
+	 */
+	pause: function() {
+		$clear(this.timer);
+	}
+});
 
 /**
  *	Rating.

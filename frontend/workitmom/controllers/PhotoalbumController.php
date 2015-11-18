@@ -31,12 +31,32 @@ class WorkitmomPhotoalbumController extends WorkitmomNewcommentsController {
 		$photosModel = $this->getModel('newphotos');
 		$photo = $photosModel->getPhoto($photoId);
 		
-		/* Get all photos from same author */
-		$total = null;
-		$photoalbum = $photosModel->getPhotos(0, 0, $total, array(
+		/* Check if current user is the author */
+		$personModel = $this->getModel('person');
+		$person = $personModel->getPerson(array('username' => $photo['author']['username']));
+
+		$userModel = $this->getModel('user');
+		$isSelf = $userModel->isSelf($person);
+		$options = array(
 			'user' => $photo['author']['userid'],
 			'order' => 'date'
-		));
+		);
+
+		if(!$isSelf)
+		{
+			$options['status'] = 1;
+			
+			/*Check photo if it is alive.(Avoid change imageID directly in URL)*/
+			if(!(int)$photo['status'])
+			{
+				return $this->_errorRedirect();
+			}
+		}			
+		
+		/* Get all photos from same author */
+		$total = null;		
+		$photoalbum = $photosModel->getPhotos(0, 0, $total,$options);
+		
 		$photoPosition = array_search($photo['id'], array_keys($photoalbum)) + 1;
 		
 		/* Get photos from photoalbum that are adjacent to photo */

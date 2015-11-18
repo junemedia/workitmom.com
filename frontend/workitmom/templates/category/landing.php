@@ -20,9 +20,9 @@
 
 			<div class="col-l">
 
-				<?php //$siteModules->from_our_bloggers(); //removed at 20170717?>
+				<?php $siteModules->from_our_bloggers();?>
 
-				<!--removed at 20170717 <div class="divider"></div>-->
+				<div class="divider"></div>
 
 				<?php $siteModules->sound_off(); ?>
 

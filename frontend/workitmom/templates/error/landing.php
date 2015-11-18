@@ -9,7 +9,35 @@
 				<div class="content">
 					<div id="balancing_act_icon" class="icon fl"></div>
 					<h1>Page not found...</h1>
-					<h2>Sorry, the content you were looking for could not be found</h2>
+					<div class="text-content">
+					
+						<p>We're sorry, but the page that you requested is no longer available.
+						We will take you to our home page in a few seconds or you can click <a href="http://www.workitmom.com">here</a>.</p>
+					
+					</div>
+					<div>
+				<script language="javascript">
+				var i = 5;
+				window.onload=redirect;
+				function redirect()
+				{
+				    var time = document.getElementById('time');
+				    i--;
+				    setTimeout("redirect()",1100);
+				    if(i<0)
+				    {
+				    	i = 5;
+				    }
+				    if(i==0)
+				    {
+				    	i = 5;
+				        location.replace("<?php echo SITEURL.'/search'?>");
+				    }
+				}
+				</script>
+				<span id="time">
+				</span>
+				</div>
 				</div>
 
 				<div class="bot"></div>

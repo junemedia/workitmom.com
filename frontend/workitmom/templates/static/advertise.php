@@ -39,7 +39,7 @@
 
 					<p>We look forward to working with you to find the best way to feature your product or service to our audience. In addition to traditional banner advertising, we offer content sponsorship and giveaways, email sponsorship, and featured listings in our Marketplace. </p>
 					
-					<h2>Please send an email to victoria@workitmom.com to request our media kit and discuss your marketing needs.</h2>
+					<h2>Please send an email to info@workitmom.com to request our media kit and discuss your marketing needs.</h2>
 
 					<table width="100%" cellspacing="0" cellpadding="0" style="margin-top:20px;">
 						<thead>

@@ -16,7 +16,7 @@
 				<li><a href="<?= SITEURL ?>/account/details">My Profile Details</a></li>
 				<li><a href="<?= SITEURL ?>/account/alerts">My Alerts</a></li>
 				<li><a href="<?= SITEURL ?>/account/details?tab=privacy">My Privacy</a></li>
-				<li><a href="<?= SITEURL ?>/account/photos">My Photos</a><span class="new">NEW!</span></li>
+				<li><a href="<?= SITEURL ?>/account/photos">My Photos</a><!--<span class="new">NEW!</span>--></li>
 				<li><a href="<?= SITEURL ?>/account/friends">My Friends</a></li>
 				<li><a href="<?= SITEURL ?>/account/blogs">My Blogs</a></li>
 				<li><a href="<?= SITEURL ?>/account/myday">My Day Archive</a></li>

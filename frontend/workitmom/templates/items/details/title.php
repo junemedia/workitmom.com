@@ -26,6 +26,10 @@
 					} ?>
 					<?php if (!$item->rating['user']){ ?><a class="scroll" href="#ratings">Rate this now!</a>&nbsp;<?php } ?>
 				</p>
+				
+				<a href="https://twitter.com/Work_It_Mom" class="twitter-follow-button" data-show-count="false">Follow @Work_It_Mom</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				
 			</div>
 			<div class="clear"></div>
 			

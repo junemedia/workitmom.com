@@ -42,7 +42,13 @@
 							<!-- Slideshow Author -->
 							<div id="slideshow-author">
 									<a href="<?= Uri::build($guestAuthor); ?>" style="float: right;"><img src="<?php Template::image($guestAuthor, 40); ?>" /></a>
-									<h3>By <?= $guestAuthor->name; ?></h3>
+									<h3>By <?= $guestAuthor->name; ?></h3>							
+									
+									<br />
+
+									<a href="https://twitter.com/Work_It_Mom" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Work_It_Mom</a>
+									<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+									
 									<?php if ($guestAuthor->byline){ ?><p><?= $guestAuthor->byline; ?></p><?php } ?>
 									<div class="clear"></div>
 							</div>

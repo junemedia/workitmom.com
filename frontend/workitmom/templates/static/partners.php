@@ -18,7 +18,7 @@
 
 			<div id="static_content">
 
-				<p>We're always interested in talking with companies and organizations that support working moms. To speak with us about a possible partnership, please contact Victoria Grace at <a href="mailto:victoria@workitmom.com" target="_blank">victoria@workitmom.com</a>.</p>
+				<p>We're always interested in talking with companies and organizations that support working moms. To speak with us about a possible partnership, please contact us at <a href="mailto:info@workitmom.com" target="_blank">info@workitmom.com</a>.</p>
 
 				<div id="partner_list" class="item_list grid_list">
 				<ul>
