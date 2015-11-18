@@ -8,20 +8,20 @@
 class Config {
 	
 	/* Database settings */
-	var $databaseHost = 'localhost';
-	var $databaseUser = 'workitmom';
-	var $databasePass = 'w0rkit';
+	var $databaseHost = 'afc8b7e73c0f2b76df901ef993167a730f11dcf0.rackspaceclouddb.com';
+	var $databaseUser = 'wimapp01';
+	var $databasePass = 'wimapp01';
 	var $databaseName = '333213_workitmom';
 	
 	/* Server settings */
 	var $baseUrl = '';
 
 	/* Data cache */
-	var $memcacheHost = '192.168.0.200';
+	var $memcacheHost = '192.168.51.86';
 	var $memcachePort = '12582';
 	
 	/* Session cache */
-	var $memcacheSessionHost = '192.168.0.200';
+	var $memcacheSessionHost = '192.168.51.86';
 	var $memcacheSessionPort = '12583';
 	
 	/* Site settings */

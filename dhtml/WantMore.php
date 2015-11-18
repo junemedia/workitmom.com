@@ -1,6 +1,6 @@
 <?php
 
-$subcampid = '4328';	// WIM_R4L CrossPromo-0615
+$subcampid = '4370';	// WIM_R4L CrossPromo-1015
 $listid = '553,558';
 $message = '';
 if ($_POST['submit'] == 'Y') {
