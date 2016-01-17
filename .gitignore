@@ -16,6 +16,10 @@ openads/
 openx-2.8.4/
 
 leon/
+cache/
+
+# for now...
+assets/
 
 # old subversion directories
 .svn/
