@@ -13,15 +13,13 @@
 			<li><a href="http://goo.gl/JEH0Y">Recipe4Living</a></li>
 			<li><a href="http://goo.gl/UUd0z">Fit & Fab Living</a></li>
 			<li><a href="http://goo.gl/qtaUh">Running With Mascara</a></li>
-			<li><a href="http://goo.gl/2pH48">Chew on That Blog</a></li>		
-			<li><a href="http://www.savvyfork.com/">Savvy Fork</a></li>	
+			<li><a href="http://goo.gl/2pH48">Chew on That Blog</a></li>
+			<li><a href="http://www.savvyfork.com/">Savvy Fork</a></li>
 		</ul>
 		</div>
 		<div style="margin-top: 15px;padding-top: 15px;background:url('http://www.workitmom.com/frontend/workitmom/images/site/dotted-large.png') repeat-x scroll left top transparent;">
 		<ul class="fl text-content">
 			<li><a href="<?= SITEURL ?>/contact/">Contact </a></li>
-			<? /*<li><a href="<?= SITEURL ?>/team/">Team</a></li>
-			<li><a href="<?= SITEURL ?>/advisors/">Advisors</a></li> */?>
 			<li><a href="<?= SITEURL ?>/press/">Press</a></li>
 			<li><a href="<?= SITEURL ?>/advertise/">Advertise</a></li>
 			<li><a href="<?= SITEURL ?>/partners/">Our Friends</a></li>
@@ -86,16 +84,16 @@
 	<?php if (($task == 'view') && (($option == 'index') || ($option == 'blogs') || ($option == 'connect')  || ($option == 'questions') )) { ?>
 	<script type="text/javascript" src="http://cetrk.com/pages/scripts/0008/5621.js"></script>
 	<?php } ?>
-	
-	<?php if (!(strstr($_SERVER['REQUEST_URI'],'redbox-keeping-the-family-budget-on-track-one-rental-at-a-time') || 
-			strstr($_SERVER['REQUEST_URI'],'craftsy-the-creative-outlet-for-the-busy-moms') || 
-			strstr($_SERVER['REQUEST_URI'],'/bloggers/milkandcookies/') || 
-			strstr($_SERVER['REQUEST_URI'],'199039') || strstr($_SERVER['REQUEST_URI'],'199051') || 
+
+	<?php if (!(strstr($_SERVER['REQUEST_URI'],'redbox-keeping-the-family-budget-on-track-one-rental-at-a-time') ||
+			strstr($_SERVER['REQUEST_URI'],'craftsy-the-creative-outlet-for-the-busy-moms') ||
+			strstr($_SERVER['REQUEST_URI'],'/bloggers/milkandcookies/') ||
+			strstr($_SERVER['REQUEST_URI'],'199039') || strstr($_SERVER['REQUEST_URI'],'199051') ||
 			$_SERVER['REQUEST_URI'] == '/')) { ?>
 		<!-- infolinks tag for WIM -->
 		<script type="text/javascript">var infolinks_pid = 1863387;var infolinks_wsid = 2;</script><script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
 		<!-- infolinks tag for WIM -->
-		
+
 	<?php } ?>
 
 <!-- BEGIN SiteCTRL Script -->
@@ -134,6 +132,8 @@ if(document.location.protocol=='http:'){
 <!-- -SWOOP -->
 
 <?php include BLUPATH_TEMPLATES.'/site/ads/underdog.php'; ?>
+
+<?php include BLUPATH_TEMPLATES.'/site/ads/liveramp.php'; ?>
 
 </body>
 </html>
