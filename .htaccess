@@ -28,6 +28,10 @@ RewriteRule ^(.*)$ http://www.google.com/
 #RewriteCond %{QUERY_STRING} !(wppt=1) [NC]
 #RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
+# Non-www subdomains get restrictive robots.txt
+RewriteCond %{HTTP_HOST} !^www\.(.*)
+RewriteRule ^robots.txt$ robots.disallow.txt [L]
+
 # Force checkout to use SSL
 #RewriteCond %{SERVER_PORT} !^443
 #RewriteCond %{REQUEST_URI} ^(/checkout)$ [NC]
@@ -67,7 +71,8 @@ RewriteCond %{REQUEST_URI} !^/bloggers\/(.*)\/feed [NC]
 RewriteCond %{REQUEST_URI} !^/(.*)xml\.gz [NC]
 RewriteCond %{REQUEST_URI} !^/(.*)\.xml [NC]
 RewriteCond %{QUERY_STRING} !(wppt=1) [NC]
-RewriteCond $1 !^(ping\.php|robots\.txt|newserver\.php)
+RewriteCond $1 !^(ping\.php|newserver\.php)
+RewriteCond $1 !^robots(\.disallow)?\.txt
 RewriteRule ^(.*)$ /index.php [L]
 
 Redirect 301 /quicktips/detail/7025 http://workitmom.com/slideshows/detail/198335/top-10-educational-websites-for-kids/
