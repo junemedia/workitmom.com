@@ -29,7 +29,7 @@ RewriteRule ^(.*)$ http://www.google.com/
 #RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
 # Non-www subdomains get restrictive robots.txt
-RewriteCond %{HTTP_HOST} !^www\.(.*)
+RewriteCond %{HTTP_HOST} !^(www\.)?workitmom\.com$
 RewriteRule ^robots.txt$ robots.disallow.txt [L]
 
 # Force checkout to use SSL
