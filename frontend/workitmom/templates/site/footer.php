@@ -107,6 +107,7 @@ if(document.location.protocol=='http:'){
 }
 </script>
 <!-- END SiteCTRL Script -->
+
 <!-- +SWOOP -->
   <script type="text/javascript">
   (function addSwoopOnce(domain) {
@@ -132,5 +133,8 @@ if(document.location.protocol=='http:'){
   })('SW-10152718-5');
 </script>
 <!-- -SWOOP -->
+
+<?php include BLUPATH_TEMPLATES.'/site/ads/underdog.php'; ?>
+
 </body>
 </html>
