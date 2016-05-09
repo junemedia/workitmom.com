@@ -1,3 +1,2 @@
 User-agent: *
 Disallow: /member_blogs/
-http://www.workitmom.com/web_sitemap_ca4f4853.xml.gz # Added by Google Sitemap Generator
