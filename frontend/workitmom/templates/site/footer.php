@@ -90,50 +90,15 @@
 			strstr($_SERVER['REQUEST_URI'],'/bloggers/milkandcookies/') ||
 			strstr($_SERVER['REQUEST_URI'],'199039') || strstr($_SERVER['REQUEST_URI'],'199051') ||
 			$_SERVER['REQUEST_URI'] == '/')) { ?>
-		<!-- infolinks tag for WIM -->
-		<script type="text/javascript">var infolinks_pid = 1863387;var infolinks_wsid = 2;</script><script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
-		<!-- infolinks tag for WIM -->
+    <?php include BLUPATH_TEMPLATES.'/site/ads/infolinks.php'; ?>
 
 	<?php } ?>
 
-<!-- BEGIN SiteCTRL Script -->
-<script type="text/javascript">
-if(document.location.protocol=='http:'){
- var Tynt=Tynt||[];Tynt.push('adh8yO_H8r45vlacwqm_6l');
- (function(){var s=document.createElement('script');s.async="async";s.type="text/javascript";s.src='http://tcr.tynt.com/ti.js';var h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();
-}
-</script>
-<!-- END SiteCTRL Script -->
 
-<!-- +SWOOP -->
-  <script type="text/javascript">
-  (function addSwoopOnce(domain) {
-    var win = window;
-    try {
-      while (!(win.parent == win || !win.parent.document)) {
-        win = win.parent;
-      }
-    } catch (e) {
-      /* noop */
-    }
-    var doc = win.document;
-    if (!doc.getElementById('swoop_sdk')) {
-      var serverbase = doc.location.protocol + '//ardrone.swoop.com/';
-      var s = doc.createElement('script');
-      s.type = "text/javascript";
-      s.src = serverbase + 'js/spxw.js';
-      s.id = 'swoop_sdk';
-      s.setAttribute('data-domain', domain);
-      s.setAttribute('data-serverbase', serverbase);
-      doc.head.appendChild(s);
-    }
-  })('SW-10152718-5');
-</script>
-<!-- -SWOOP -->
-
-<?php include BLUPATH_TEMPLATES.'/site/ads/underdog.php'; ?>
-
-<?php include BLUPATH_TEMPLATES.'/site/ads/liveramp.php'; ?>
+  <?php include BLUPATH_TEMPLATES.'/site/ads/tynt.php'; ?>
+  <?php include BLUPATH_TEMPLATES.'/site/ads/swoop.php'; ?>
+  <?php include BLUPATH_TEMPLATES.'/site/ads/underdog.php'; ?>
+  <?php include BLUPATH_TEMPLATES.'/site/ads/liveramp.php'; ?>
 
 </body>
 </html>
