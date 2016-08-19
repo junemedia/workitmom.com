@@ -256,8 +256,6 @@ class WorkitmomIndexController extends ClientFrontendController
 		// One for you
 		/////// $emailMsg->quickSend(BluApplication::getSetting('contactEmail'), "Work It, Mom!", "Work It, Mom! Contact - ".$subject, 'contact', $vars);
 		// One for me
-		//$emailMsg->quickSend('hillarym@silvercarrot.com', "Work It, Mom!", "Work It, Mom! Contact - ".$subject, 'contact', $vars);
-		//$emailMsg->quickSend('meredithg@junemedia.com', "Work It, Mom!", "Work It, Mom! Contact - ".$subject, 'contact', $vars);
 		$emailMsg->quickSend('editors@junemedia.com', "Work It, Mom!", "Work It, Mom! Contact - ".$subject, 'contact', $vars);
 
 

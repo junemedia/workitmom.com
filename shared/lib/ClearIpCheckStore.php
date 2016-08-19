@@ -34,11 +34,11 @@ if($affectRows>=1)
 if($str != '')
 {
 	mail(
-			'leonz@junemedia.com,howew@junemedia.com',
+			'johns@junemedia.com',
 			'WIM.IP.Wipe.Report - ' . date("Y-m-d H:m:s", time()),
 			$str,
-			'From: WIM.Wipe <howew@junemedia.com>',
-			"Return-Path:<howew@junemedia.com>\r\n"
+			'From: WIM.Wipe <johns@junemedia.com>',
+			"Return-Path:<johns@junemedia.com>\r\n"
 		);
 }
 ?>

@@ -163,10 +163,10 @@ $t2 = microtime(true);
 $str = "Rss Cache start at ".date("Y-m-d H:i:s",$t1).", end at ".date("Y-m-d H:i:s",$t2).".";
 //echo "\nEND Rss Cache at : " . microtime(true);
 mail(
-		'leonz@junemedia.com,howew@junemedia.com',
+		'johns@junemedia.com',
 		'WIM.RSS.Cache.Report - ' . date("Y-m-d H:m:s", time()),
 		$str,
-		'From: WIM.RSS.Cache <howew@junemedia.com>\r\n',
-		"Return-Path:<howew@junemedia.com>\r\n"
+		'From: WIM.RSS.Cache <johns@junemedia.com>\r\n',
+		"Return-Path:<johns@junemedia.com>\r\n"
 	);
 ?>

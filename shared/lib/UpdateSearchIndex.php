@@ -22,11 +22,11 @@ $str = 'Search index updated in '.$time.' seconds';
 if($str != '')
 {
 	mail(
-			'howew@junemedia.com,leonz@junemedia.com',
+			'johns@junemedia.com',
 			'WIM.Update.Search.Report - ' . date("Y-m-d H:m:s", time()),
 			$str,
-			'From: WIM.Update.Search <howew@junemedia.com>',
-			"Return-Path:<howew@junemedia.com>\r\n"
+			'From: WIM.Update.Search <johns@junemedia.com>',
+			"Return-Path:<johns@junemedia.com>\r\n"
 		);
 }
 ?>
