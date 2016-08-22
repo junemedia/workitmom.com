@@ -158,15 +158,7 @@ mysql_close($db);
 setCache($cacheKey,$records);
 
 $t2 = microtime(true);
-//echo (($t2-$t1)*1000).'ms';
 
 $str = "Rss Cache start at ".date("Y-m-d H:i:s",$t1).", end at ".date("Y-m-d H:i:s",$t2).".";
-//echo "\nEND Rss Cache at : " . microtime(true);
-mail(
-		'johns@junemedia.com',
-		'WIM.RSS.Cache.Report - ' . date("Y-m-d H:m:s", time()),
-		$str,
-		'From: WIM.RSS.Cache <johns@junemedia.com>\r\n',
-		"Return-Path:<johns@junemedia.com>\r\n"
-	);
+
 ?>

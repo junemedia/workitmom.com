@@ -18,15 +18,4 @@ $endTime = microtime(true);
 $time = round($endTime - $startTime, 3);
 $str = 'Search index updated in '.$time.' seconds';
 
-
-if($str != '')
-{
-	mail(
-			'johns@junemedia.com',
-			'WIM.Update.Search.Report - ' . date("Y-m-d H:m:s", time()),
-			$str,
-			'From: WIM.Update.Search <johns@junemedia.com>',
-			"Return-Path:<johns@junemedia.com>\r\n"
-		);
-}
 ?>

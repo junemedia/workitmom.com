@@ -31,14 +31,4 @@ if($affectRows>=1)
 	$str .= "WIM ipcheckstorearchive table: affect rows ".$affectRows."\n";
 }
 
-if($str != '')
-{
-	mail(
-			'johns@junemedia.com',
-			'WIM.IP.Wipe.Report - ' . date("Y-m-d H:m:s", time()),
-			$str,
-			'From: WIM.Wipe <johns@junemedia.com>',
-			"Return-Path:<johns@junemedia.com>\r\n"
-		);
-}
 ?>
