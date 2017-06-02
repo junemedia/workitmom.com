@@ -1,4 +1,3 @@
-<!--INFOLINKS_OFF-->
 <div class="wrapper">
   <div class="content">
 
@@ -85,4 +84,3 @@
     </form>
   </div>
 </div>
-<!--INFOLINKS_ON-->

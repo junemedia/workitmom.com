@@ -1,4 +1,3 @@
-<!--INFOLINKS_OFF-->
 <?php
 
 $message = '';

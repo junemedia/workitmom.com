@@ -84,17 +84,6 @@
     <script type="text/javascript" src="http://cetrk.com/pages/scripts/0008/5621.js"></script>
 <?php } ?>
 
-<?php
-if (!(strstr($_SERVER['REQUEST_URI'], 'redbox-keeping-the-family-budget-on-track-one-rental-at-a-time') ||
-      strstr($_SERVER['REQUEST_URI'],'craftsy-the-creative-outlet-for-the-busy-moms') ||
-      strstr($_SERVER['REQUEST_URI'],'/bloggers/milkandcookies/') ||
-      strstr($_SERVER['REQUEST_URI'],'199039') || strstr($_SERVER['REQUEST_URI'],'199051') ||
-      $_SERVER['REQUEST_URI'] == '/')) {
-  include BLUPATH_TEMPLATES.'/site/ads/infolinks.php';
-}
-?>
-
-
 <?php include BLUPATH_TEMPLATES.'/site/ads/tynt.php'; ?>
 <?php include BLUPATH_TEMPLATES.'/site/ads/swoop.php'; ?>
 <?php include BLUPATH_TEMPLATES.'/site/ads/underdog.php'; ?>

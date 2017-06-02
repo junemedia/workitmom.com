@@ -2,7 +2,6 @@
   <div class="header_icon"><img src="<?= ASSETURL; ?>/blogheaderimages/45/45/1/sm_<?= $imageUrl; ?>" /></div>
   <div class="top"></div>
   <div class="content">
-    <!--INFOLINKS_OFF-->
     <?php if ($imagemapUrl) { ?>
       <img class='blog-banner' src="<?= ASSETURL; ?>/blogheaderimages/0/0/1/<?= $imagemapUrl; ?>" />
     <?php } else { ?>
@@ -18,7 +17,6 @@
       </div>
     <?php } ?>
     <div class="clear"></div>
-    <!--INFOLINKS_ON-->
   </div>
   <div class="bot"></div>
 </div><!-- /#article_title -->

@@ -1,4 +1,3 @@
-<!--INFOLINKS_OFF-->
 <div class="wrapper">
   <div class="content">
     <form action="<?= SITEURL ?>/register" method="post" enctype="multipart/form-data">
@@ -228,4 +227,3 @@
     </form>
   </div>
 </div>
-<!--INFOLINKS_ON-->
