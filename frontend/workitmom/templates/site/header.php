@@ -19,7 +19,6 @@
 	<link rel="icon" href="<?= SITEASSETURL; ?>/images/favicon.ico" type="image/vnd.microsoft.icon" />
 	<link rel="stylesheet" href="<?= SITEASSETURL; ?>/css/rotator.css" type="text/css"/>
 
-	<?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'CrazyEgg Robot') !== 0) { ?>
 	<script type="text/javascript">
 		/* Define global static variables. */
 		DEBUG = <?= DEBUG ? 'true' : 'false' ?>;
@@ -45,7 +44,6 @@
 
 	<script type="text/javascript">
 	window.addEvent('load', function(){
-
 		/* Init history manager */
 		HistoryManager.initialize();
 
@@ -78,7 +76,7 @@
 
 	});
 	</script>
-	<?php } ?>
+
 <meta name="google-site-verification" content="Xh7dE8-tonX-jlc7xX0zTH10ML0m82yrn7lyLbVLtww" />
 	<!-- Yieldbot.com Intent Tag LOADING -->
     <script type="text/javascript" src="https://cdn.yldbt.com/js/yieldbot.intent.js"></script>

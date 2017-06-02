@@ -51,14 +51,6 @@
     <?php include BLUPATH_TEMPLATES.'/site/ads/openx_728x90btf.html'; ?>
 </div><!-- /#ad-header -->
 
-<?php
-  if (($task == 'view') && (($option == 'index') ||
-                            ($option == 'blogs') ||
-                            ($option == 'connect') ||
-                            ($option == 'questions') )) { ?>
-    <script type="text/javascript" src="http://cetrk.com/pages/scripts/0008/5621.js"></script>
-<?php } ?>
-
 <?php include BLUPATH_TEMPLATES.'/site/ads/tynt.php'; ?>
 <?php include BLUPATH_TEMPLATES.'/site/ads/swoop.php'; ?>
 <?php include BLUPATH_TEMPLATES.'/site/ads/underdog.php'; ?>
