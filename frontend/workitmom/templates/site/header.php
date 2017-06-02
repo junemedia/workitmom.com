@@ -113,7 +113,7 @@ include_once("dhtml.php");
 <div id="site-wrapper">
 
 	<div id="ad-header">
-    <?php include BLUPATH_TEMPLATES.'/site/ads/openx_728x90atf.html.php'; ?>
+    <?php include BLUPATH_TEMPLATES.'/site/ads/openx_728x90atf.html'; ?>
 	</div>
 
 	<div id="nav-header">
