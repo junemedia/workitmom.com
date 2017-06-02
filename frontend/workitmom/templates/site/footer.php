@@ -51,7 +51,6 @@
     <?php include BLUPATH_TEMPLATES.'/site/ads/openx_728x90btf.html'; ?>
 </div><!-- /#ad-header -->
 
-<script src="http://31870.hittail.com/mlt.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://static.fmpub.net/site/workitmom"></script>
 
 <?php
