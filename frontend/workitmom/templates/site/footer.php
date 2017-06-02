@@ -51,8 +51,6 @@
     <?php include BLUPATH_TEMPLATES.'/site/ads/openx_728x90btf.html'; ?>
 </div><!-- /#ad-header -->
 
-<script type="text/javascript" src="http://static.fmpub.net/site/workitmom"></script>
-
 <?php
   if (($task == 'view') && (($option == 'index') ||
                             ($option == 'blogs') ||
