@@ -16,6 +16,10 @@
 			<?php $this->detail_body($page); ?>
 			
 			<?php $this->detail_share(); ?>
+
+      <?php include BLUPATH_TEMPLATES.'/site/ads/lockerdome.html'; ?>
+
+      <div class="divider"></div>
 			
 			<?php $this->comments_add(); ?>
 			

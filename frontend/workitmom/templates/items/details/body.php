@@ -33,6 +33,11 @@
 			<?= $pagination->get('content'); ?>
 
 		</div>
+
+    <div style="margin:30px auto 0;">
+      <?php include BLUPATH_TEMPLATES.'/site/ads/lockerdome.html'; ?>
+    </div>
+
 		<? $this->detail_pullquote(); ?>
 
 		<div class="clear"></div>
