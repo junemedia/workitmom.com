@@ -106,11 +106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-W4CRGD');</script>
 <!-- End Google Tag Manager -->
 
-<?php
-//if ($_SERVER['REMOTE_ADDR'] == '216.180.167.121') {
-include_once("dhtml.php");
-//}
-?>
+<?php //include_once("dhtml.php"); ?>
 
 <div id="site-wrapper">
 
