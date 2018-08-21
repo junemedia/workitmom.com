@@ -70,6 +70,7 @@ RewriteCond %{REQUEST_URI} !^/(.*)wp-admin(.*) [NC]
 RewriteCond %{REQUEST_URI} !^/bloggers\/(.*)\/feed [NC]
 RewriteCond %{REQUEST_URI} !^/(.*)xml\.gz [NC]
 RewriteCond %{REQUEST_URI} !^/(.*)\.xml [NC]
+RewriteCond %{REQUEST_URI} !^/ads\.txt
 RewriteCond %{QUERY_STRING} !(wppt=1) [NC]
 RewriteCond $1 !^(ping\.php|newserver\.php)
 RewriteCond $1 !^robots(\.disallow)?\.txt
