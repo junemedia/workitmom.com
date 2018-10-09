@@ -51,7 +51,6 @@
     <?php include BLUPATH_TEMPLATES.'/site/ads/openx_728x90btf.html'; ?>
 </div><!-- /#ad-header -->
 
-<?php include BLUPATH_TEMPLATES.'/site/ads/tynt.php'; ?>
 <?php include BLUPATH_TEMPLATES.'/site/ads/underdog.php'; ?>
 <?php include BLUPATH_TEMPLATES.'/site/ads/pubexchange_js.php'; ?>
 
