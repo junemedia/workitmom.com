@@ -251,7 +251,7 @@ class WorkitmomBlogsController extends WorkitmomCommentsController {
 	 *	Create a space for an ad underneath the listing sorter.
 	 */
 	protected function members_listing_ad() {
-		include(BLUPATH_TEMPLATES . '/site/ads/WEBSITE_LEFT_BANNER_1.php');
+		// I got nothing
 	}
 
 	/**

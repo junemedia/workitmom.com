@@ -15,10 +15,6 @@
 			<?php } ?>
 		</ul>
 		
-		<?php
-			include(BLUPATH_TEMPLATES . '/site/ads/WEBSITE_LEFT_BANNER_1.php');
-		?>
-
 		<div class="clear"></div>
 	</div>
 

@@ -388,7 +388,7 @@ abstract class WorkitmomItemsController extends WorkitmomCommentsController {
 	 *	Allow space for an ad to sit under browse/categories bar.
 	 */
 	protected function listing_ad() {
-		include(BLUPATH_TEMPLATES . '/site/ads/WEBSITE_LEFT_BANNER_2.php');
+		// I got nothing
 	}
 
 	/**

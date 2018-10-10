@@ -47,9 +47,6 @@
   <?php if (DEBUG_INFO && isset($debugInfo)) { echo $debugInfo; } ?>
 </div><!-- /#site-wrapper -->
 
-<div id="ad-header">
-    <?php include BLUPATH_TEMPLATES.'/site/ads/openx_728x90btf.html'; ?>
-</div><!-- /#ad-header -->
 
 <?php include BLUPATH_TEMPLATES.'/site/ads/pubexchange_js.php'; ?>
 

@@ -80,18 +80,6 @@
   </script>
 
 <meta name="google-site-verification" content="Xh7dE8-tonX-jlc7xX0zTH10ML0m82yrn7lyLbVLtww" />
-  <!-- Yieldbot.com Intent Tag LOADING -->
-    <script type="text/javascript" src="https://cdn.yldbt.com/js/yieldbot.intent.js"></script>
-    <!-- Yieldbot.com Intent Tag ACTIVATION -->
-    <script type="text/javascript">
-        yieldbot.pub('a173');
-        yieldbot.defineSlot('LB_ATF');
-        yieldbot.defineSlot('MR_ATF');
-        yieldbot.defineSlot('MR_Mid');
-        yieldbot.defineSlot('LB_BTF');
-        yieldbot.go();
-    </script>
-    <!-- END Yieldbot.com Intent Tag -->
 </head>
 
 <body>
@@ -109,11 +97,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php //include_once("dhtml.php"); ?>
 
 <div id="site-wrapper">
-
-  <div id="ad-header">
-    <?php include BLUPATH_TEMPLATES.'/site/ads/openx_728x90atf.html'; ?>
-  </div>
-
   <div id="nav-header">
 
     <div id="logo">
