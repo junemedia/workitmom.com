@@ -98,6 +98,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php //include_once("dhtml.php"); ?>
 
 <div id="site-wrapper">
+
+  <?php // being used by CafeMedia to target header ads ?>
+  <div id="ad-header"></div>
+
   <div id="nav-header">
 
     <div id="logo">
