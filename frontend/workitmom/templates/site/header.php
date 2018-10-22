@@ -35,6 +35,7 @@
   <script type="text/javascript" src="<?= SITEASSETURL ?>/js/sifrConfig.js,Color.js?v=3"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
 
+  <?php include BLUPATH_TEMPLATES.'/site/ads/adthrive_js.php'; ?>
 
   <?php
     // Page-specific script includes
