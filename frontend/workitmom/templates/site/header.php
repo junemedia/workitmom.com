@@ -33,7 +33,7 @@
   <script type="text/javascript" src="<?= COREASSETURL ?>/plugins/tiny_mce/tiny_mce.js?v=3"></script>
   <script type="text/javascript" src="<?= COREASSETURL ?>/js/mootoolsCore.js,mootoolsMore.js,StickyWin.js,Interface.js,Nav.js,HistoryManager.js,Forms.js,BrowseArea.js,Autocompleter.js,Milkbox.js,Wizard.js,sifr.js,TinyMCE.js?v=3"></script>
   <script type="text/javascript" src="<?= SITEASSETURL ?>/js/sifrConfig.js,Color.js?v=3"></script>
-  <script type="text/javascript" src="<?= SITEASSETURL ?>/js/JSON.polyfill.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
 
 
   <?php
