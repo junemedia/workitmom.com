@@ -33,7 +33,10 @@
   <script type="text/javascript" src="<?= COREASSETURL ?>/plugins/tiny_mce/tiny_mce.js?v=3"></script>
   <script type="text/javascript" src="<?= COREASSETURL ?>/js/mootoolsCore.js,mootoolsMore.js,StickyWin.js,Interface.js,Nav.js,HistoryManager.js,Forms.js,BrowseArea.js,Autocompleter.js,Milkbox.js,Wizard.js,sifr.js,TinyMCE.js?v=3"></script>
   <script type="text/javascript" src="<?= SITEASSETURL ?>/js/sifrConfig.js,Color.js?v=3"></script>
+
+  <?php // some JSON stuff to fix, counteract, whatever mootools is or isn't doing ?>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+  <script type="text/javascript" src="<?= SITEASSETURL ?>/js/JSON_fix.js"></script>
 
   <?php include BLUPATH_TEMPLATES.'/site/ads/adthrive_js.php'; ?>
 
