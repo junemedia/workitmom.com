@@ -2,7 +2,7 @@
 
     <div class="panel-left">
 
-      <?php include BLUPATH_TEMPLATES.'/site/ads/connatix_infeed.php'; ?>
+      <?php include BLUPATH_TEMPLATES.'/site/ads/adthrive_video.php'; ?>
 
       <div id="landing_title" class="block rounded-630-landing">
         <div class="top"></div>
