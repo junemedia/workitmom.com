@@ -7,7 +7,7 @@
 <!-- CM Collapsible and Mobile Video Players -->
 <div id="adthrive-desktop-video" style="margin-bottom:1em;">
   <script src="https://content.jwplatform.com/libraries/gka7Nb51.js"></script>
-  <div class="player-container" style="margin: 0px auto; width: 90%;">
+  <div class="player-container" style="margin: 0px auto; width: 100%;">
     <div class="player-position">
       <span class="copy"><img src="" style="display:inline-block; vertical-align:middle"><h3>OUR OTHER VIDEOS</h3></span>
       <div id="player" data-plid="vByieQJL" data-sticky data-shuffle></div>
