@@ -9,6 +9,9 @@
   <meta name="description" content="Work It, Mom! is an online community for working moms. Whether you work outside the home, at home, or run your own business, you can come to Workitmom.com to connect with other moms similar to you and share advice on anything from balancing work and family, finding quick dinner recipes, getting better organized, growing your business, finding time for yourself, and much more." />
   <meta name="author" content="blubolt Design, www.blubolt.com" />
   <meta name="google-site-verification" content="zqNnlb9kPVvoStriY2UvMdrJOlErSd9XEEoUNPw-h_M" />
+
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;block-all-mixed-content">
+
   <meta name="norton-safeweb-site-verification" content="arar48u-a250q41u9655u9t1z9axdz3t7d3plfhs988y31w2evk59bhfc2dp9l94ruetqihbdcfvaci8j52qkp3n82b3kiy7fnbvn1f99vwvflf2t81vapd9a6ye5gfx" />
   <link rel="stylesheet" href="<?= SITEASSETURL; ?>/css/global.css,sifrScreen.css?v=3" type="text/css" media="screen" />
   <link rel="stylesheet" href="<?= SITEASSETURL; ?>/css/sifrPrint.css?v=3" type="text/css" media="print" />
